@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:untitled2/views/Pages/odds_by_five_workout.dart';
 
 import '../data/notifiers.dart';
 import '../widgets/drawer.dart';
-import 'Pages/five_multi_exp_screen.dart';
+import 'Pages/odds_by_five.dart';
 import 'Pages/hello_screen.dart';
 
-List<Widget> pages = [HelloScreen(), FiveMultiExpScreen()];
+List<Widget> pages = [HelloScreen(), FiveMultiExpScreen(), OddsByFiveWorkout()];
 
 class WidgetTree extends StatelessWidget {
   const WidgetTree({super.key});

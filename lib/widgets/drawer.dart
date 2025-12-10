@@ -37,9 +37,17 @@ class DrawerWidget extends StatelessWidget {
           ),
           ListTile(
             leading: const Icon(Icons.school_outlined),
-            title: const Text("Two-digit by 5"),
+            title: const Text("Odds by 5"),
             onTap: () {
-              selectedPageNotifier.value = KAppPages.fiveMultiplication;
+              selectedPageNotifier.value = KAppPages.oddsByFiveMultiplication;
+              Navigator.pop(context);
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.sports),
+            title: const Text("Work out"),
+            onTap: () {
+              selectedPageNotifier.value = KAppPages.oddsByFiveWorkout;
               Navigator.pop(context);
             },
           ),
