@@ -8,8 +8,13 @@ class KTextStyle {
   );
 
   static TextStyle body(BuildContext context) => TextStyle(
-    fontSize: 18,
-    color: Theme.of(context).colorScheme.onBackground,
+    fontSize: 22,
+    color: Theme.of(context).colorScheme.onSurface,
+  );
+  static TextStyle digit(BuildContext context) => TextStyle(
+    fontSize: 22,
+    fontWeight: FontWeight.bold,
+    color: Colors.amber,
   );
 
   static TextStyle smallNote(BuildContext context) =>

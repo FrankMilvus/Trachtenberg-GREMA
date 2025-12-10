@@ -39,7 +39,7 @@ class DrawerWidget extends StatelessWidget {
             leading: const Icon(Icons.school_outlined),
             title: const Text("Odds by 5"),
             onTap: () {
-              selectedPageNotifier.value = KAppPages.oddsByFiveMultiplication;
+              selectedPageNotifier.value = KAppPages.oddsByFiveExplication;
               Navigator.pop(context);
             },
           ),

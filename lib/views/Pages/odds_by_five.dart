@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../constants/app_pages.dart';
 import '../../constants/app_strings.dart';
 import '../../constants/text_styles.dart';
+import '../../widgets/back_widget.dart';
 import '../../widgets/fab_widget.dart';
 
 class FiveMultiExpScreen extends StatelessWidget {
@@ -11,7 +12,8 @@ class FiveMultiExpScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Odds by five'), centerTitle: true),
+      appBar: AppBar(title: const Text('Odds by five'), centerTitle: true,
+      leading: BackWidget(page: KAppPages.home,)),
       floatingActionButton: FabWidget(page: KAppPages.oddsByFiveWorkout,),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16),
