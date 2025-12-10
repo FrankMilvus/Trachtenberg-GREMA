@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../constants/colors.dart';
 import '../data/notifiers.dart';
-
-
+import '/constants/app_pages.dart';
 
 class DrawerWidget extends StatelessWidget {
   const DrawerWidget({super.key});
@@ -11,29 +11,39 @@ class DrawerWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       child: ListView(
-          children: [
-            const DrawerHeader(
-              decoration: BoxDecoration(color: Colors.blue),
-              child: Text("Drawer Header"),
+        children: [
+          DrawerHeader(
+            decoration: BoxDecoration(color: KColors.basicColor(context)),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text("Trachtenberg Grema"),
+                IconButton(
+                  onPressed: () {
+                    isDarkModeNotifier.value = !isDarkModeNotifier.value;
+                  },
+                  icon: Icon(Icons.dark_mode, color: Colors.white, size: 28),
+                ),
+              ],
             ),
-            ListTile(
-              leading: const Icon(Icons.home),
-              title: const Text("Home"),
-              onTap: () {
-                selectedPageNotifier.value = 0;
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              leading: const Icon(Icons.five_g),
-              title: const Text("Home"),
-              onTap: () {
-                selectedPageNotifier.value = 1;
-                Navigator.pop(context);
-              },
-            )
-
-          ]
+          ),
+          ListTile(
+            leading: const Icon(Icons.home),
+            title: const Text("Home"),
+            onTap: () {
+              selectedPageNotifier.value = KAppPages.home;
+              Navigator.pop(context);
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.school_outlined),
+            title: const Text("Two-digit by 5"),
+            onTap: () {
+              selectedPageNotifier.value = KAppPages.fiveMultiplication;
+              Navigator.pop(context);
+            },
+          ),
+        ],
       ),
     );
   }

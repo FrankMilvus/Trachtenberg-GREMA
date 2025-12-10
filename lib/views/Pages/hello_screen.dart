@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../../constants/app_pages.dart';
+import '../../constants/app_strings.dart';
+import '../../widgets/fab_widget.dart';
 
 class HelloScreen extends StatelessWidget {
   const HelloScreen({super.key});
@@ -7,16 +10,13 @@ class HelloScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Hello Screen"), centerTitle: true,),
+      appBar: AppBar(title: Text("What this app is?"), centerTitle: true),
+
+      floatingActionButton: FabWidget(page: KAppPages.fiveMultiplication,),
+
       body: Center(
-        child: ElevatedButton(
-          child: Text("Go to Second Screen"),
-          onPressed: () {
-            Navigator.pushNamed(context, '/');
-          },
-        ),
+        child: Text(KAppStrings.howSimpleAnyToFive),
       ),
     );
   }
 }
-
