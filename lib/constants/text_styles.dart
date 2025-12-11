@@ -17,6 +17,11 @@ class KTextStyle {
     color: Colors.amber,
   );
 
+  static TextStyle answer(BuildContext context, bool isCorrect) => TextStyle(
+    fontSize: 22,
+    color: isCorrect ? Colors.green : Theme.of(context).colorScheme.onSurface,
+  );
+
   static TextStyle smallNote(BuildContext context) =>
       TextStyle(fontSize: 14, color: Colors.grey);
 }

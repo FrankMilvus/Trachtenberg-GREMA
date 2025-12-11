@@ -1,5 +1,7 @@
 import 'dart:math';
 
+import 'list_to_digit.dart';
+
 class EvenNumberResult {
   final List<int> digits;
   final int number;
@@ -27,17 +29,9 @@ class RndDigit {
 
     if (digits[0] == 0) digits[0] += 2;
 
-    int number = arrayToDigit(digits);
+    int number = listToDigit(digits);
 
     return EvenNumberResult(digits, number);
   }
 }
 
-int arrayToDigit(List<int> array) {
-  int digit = 0;
-
-  for (int i = 0; i < array.length; i++) {
-    digit = digit * 10 + array[i];
-  }
-  return digit;
-}

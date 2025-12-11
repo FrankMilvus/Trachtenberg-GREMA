@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class OneDigitField extends StatelessWidget {
+import '../constants/text_styles.dart';
+
+class OneDigitField extends StatefulWidget {
   final FocusNode focusNode;
   final FocusNode? nextFocus;
   final FocusNode? prevFocus;
   final TextEditingController controller;
+  final int result;
+
+  // final int? answer;
 
   const OneDigitField({
     super.key,
@@ -13,15 +18,40 @@ class OneDigitField extends StatelessWidget {
     this.nextFocus,
     this.prevFocus,
     required this.controller,
+    required this.result,
+    // this.answer,
   });
+
+  @override
+  State<OneDigitField> createState() => _OneDigitFieldState();
+}
+
+class _OneDigitFieldState extends State<OneDigitField> {
+  bool isCorrect = false;
+
+  @override
+  void initState() {
+    super.initState();
+
+    widget.controller.addListener(() {
+      final value = widget.controller.text;
+
+      setState(() {
+        isCorrect = (value.isNotEmpty && value == widget.result.toString());
+        print("FIELD! $isCorrect");
+        print('FIELD! $value');
+      });
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       width: 50,
-
       child: TextField(
-        focusNode: focusNode,
+        controller: widget.controller,
+        style: KTextStyle.answer(context, isCorrect),
+        focusNode: widget.focusNode,
         decoration: const InputDecoration(
           counterText: '',
           border: OutlineInputBorder(),
@@ -34,12 +64,10 @@ class OneDigitField extends StatelessWidget {
         ],
         textAlign: TextAlign.center,
         onChanged: (value) {
-          if (value.isNotEmpty && nextFocus != null) {
-            // Move forward
-            FocusScope.of(context).requestFocus(nextFocus);
-          } else if (value.isEmpty && prevFocus != null) {
-            // Move backward when deleted
-            FocusScope.of(context).requestFocus(prevFocus);
+          if (value.isNotEmpty && widget.nextFocus != null) {
+            FocusScope.of(context).requestFocus(widget.nextFocus);
+          } else if (value.isEmpty && widget.prevFocus != null) {
+            FocusScope.of(context).requestFocus(widget.prevFocus);
           }
         },
       ),
