@@ -19,12 +19,22 @@ class _OddsByFiveWorkoutState extends State<OddsByFiveWorkout> {
   final f3 = FocusNode();
   final f4 = FocusNode();
   final f5 = FocusNode();
+  final f6 = FocusNode();
 
   final c1 = TextEditingController();
   final c2 = TextEditingController();
   final c3 = TextEditingController();
   final c4 = TextEditingController();
   final c5 = TextEditingController();
+  final c6 = TextEditingController();
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      FocusScope.of(context).requestFocus(f1); // auto-focus first field
+    });
+  }
 
   @override
   void dispose() {
@@ -33,14 +43,21 @@ class _OddsByFiveWorkoutState extends State<OddsByFiveWorkout> {
     f3.dispose();
     f4.dispose();
     f5.dispose();
-    c1.dispose(); c2.dispose(); c3.dispose(); c4.dispose(); c5.dispose();
+    f6.dispose();
+
+    c1.dispose();
+    c2.dispose();
+    c3.dispose();
+    c4.dispose();
+    c5.dispose();
+    c6.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     var rnd = RndDigit.randomEven(count: 5);
-    List <int> digits = rnd.digits;
+    List<int> digits = rnd.digits;
     var digit = arrayToDigit(digits);
 
     return Scaffold(
@@ -60,11 +77,42 @@ class _OddsByFiveWorkoutState extends State<OddsByFiveWorkout> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              OneDigitField(focusNode: f1, nextFocus: f2, controller: c1),
-              OneDigitField(focusNode: f2, nextFocus: f3, controller: c2),
-              OneDigitField(focusNode: f3, nextFocus: f4, controller: c3),
-              OneDigitField(focusNode: f4, nextFocus: f5, controller: c4),
-              OneDigitField(focusNode: f5, controller: c5),
+              OneDigitField(
+                focusNode: f6,
+                nextFocus: null,
+                prevFocus: f5,
+                controller: c6,
+              ),
+              OneDigitField(
+                focusNode: f5,
+                nextFocus: f6,
+                prevFocus: f4,
+                controller: c5,
+              ),
+              OneDigitField(
+                focusNode: f4,
+                nextFocus: f5,
+                prevFocus: f3,
+                controller: c4,
+              ),
+              OneDigitField(
+                focusNode: f3,
+                nextFocus: f4,
+                prevFocus: f2,
+                controller: c3,
+              ),
+              OneDigitField(
+                focusNode: f2,
+                nextFocus: f3,
+                prevFocus: f1,
+                controller: c2,
+              ),
+              OneDigitField(
+                focusNode: f1,
+                nextFocus: f2,
+                prevFocus: null,
+                controller: c1,
+              ),
             ],
           ),
           SizedBox(height: 10),
