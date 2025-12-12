@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../constants/app_pages.dart';
 import '../../constants/app_strings.dart';
+import '../../constants/text_styles.dart';
 import '../../widgets/fab_widget.dart';
 
 class HelloScreen extends StatelessWidget {
@@ -14,7 +15,10 @@ class HelloScreen extends StatelessWidget {
 
       floatingActionButton: FabWidget(page: KAppPages.oddsByFiveExplication),
 
-      body: Center(child: Text(KAppStrings.howSimpleAnyToFive)),
+      body: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Center(child: Text(KAppStrings.hello, style: KTextStyle.body(context),)),
+      ),
     );
   }
 }

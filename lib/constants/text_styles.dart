@@ -12,9 +12,10 @@ class KTextStyle {
     color: Theme.of(context).colorScheme.onSurface,
   );
   static TextStyle digit(BuildContext context) => TextStyle(
-    fontSize: 22,
+    fontSize: 26,
     fontWeight: FontWeight.bold,
     color: Colors.amber,
+    letterSpacing: 10,
   );
 
   static TextStyle answer(BuildContext context, bool isCorrect) => TextStyle(

@@ -17,7 +17,7 @@ class HelloScreen extends StatelessWidget {
       floatingActionButton: FabWidget(page: KAppPages.oddsByFiveExplication,),
 
       body: Center(
-        child: Text(KAppStrings.howSimpleAnyToFive),
+        child: Text(KAppStrings.hello),
       ),
     );
   }

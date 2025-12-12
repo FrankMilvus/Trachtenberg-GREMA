@@ -5,6 +5,7 @@ import 'package:untitled2/widgets/one_digit_field.dart';
 
 import '../../constants/text_styles.dart';
 import '../../widgets/back_widget.dart';
+import '../../widgets/fab_widget.dart';
 
 class OddsByFiveWorkout extends StatefulWidget {
   const OddsByFiveWorkout({super.key});
@@ -20,6 +21,8 @@ class _OddsByFiveWorkoutState extends State<OddsByFiveWorkout> {
   final f4 = FocusNode();
   final f5 = FocusNode();
   final f6 = FocusNode();
+  final refreshBtnFocus = FocusNode();
+  final clearBtnFucus = FocusNode();
 
   final c1 = TextEditingController();
   final c2 = TextEditingController();
@@ -28,18 +31,41 @@ class _OddsByFiveWorkoutState extends State<OddsByFiveWorkout> {
   final c5 = TextEditingController();
   final c6 = TextEditingController();
 
-  late final int digit;
-  late final List<int> result;
+  int digit = 0;
+  List<int> result = [];
+
+  void generateNewTask() {
+    const int multiplier = 5;
+    final rnd = DigitHelper.randomEven(count: multiplier);
+
+    setState(() {
+      digit = rnd.number;
+      result = DigitHelper.numberToList(digit * multiplier);
+
+      c1.clear();
+      c2.clear();
+      c3.clear();
+      c4.clear();
+      c5.clear();
+      c6.clear();
+    });
+
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      f1.requestFocus();
+    });
+  }
 
   @override
   void initState() {
     super.initState();
 
-    const int multiplier = 5;
-    final rnd = DigitHelper.randomEven(count: multiplier);
+    generateNewTask();
 
-    digit = rnd.number;
-    result = DigitHelper.numberToList(digit * multiplier);
+    // const int multiplier = 5;
+    // final rnd = DigitHelper.randomEven(count: multiplier);
+    //
+    // digit = rnd.number;
+    // result = DigitHelper.numberToList(digit * multiplier);
 
     void listener() => setState(() {});
 
@@ -49,10 +75,6 @@ class _OddsByFiveWorkoutState extends State<OddsByFiveWorkout> {
     c4.addListener(listener);
     c5.addListener(listener);
     c6.addListener(listener);
-
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      FocusScope.of(context).requestFocus(f1); // auto-focus first field
-    });
   }
 
   @override
@@ -96,18 +118,18 @@ class _OddsByFiveWorkoutState extends State<OddsByFiveWorkout> {
         leading: BackWidget(page: KAppPages.oddsByFiveExplication),
       ),
 
-      // floatingActionButton: FabWidget(page: KAppPages.oddsByFiveMultiplication,),
+      floatingActionButton: FabWidget(page: KAppPages.wantMore),
       body: Column(
         children: [
           SizedBox(height: 10),
           Text('$digit x5', style: KTextStyle.digit(context)),
-          SizedBox(height: 10),
+          SizedBox(height: 15),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               OneDigitField(
                 focusNode: f6,
-                nextFocus: null,
+                nextFocus: isCorrect ? clearBtnFucus : refreshBtnFocus,
                 prevFocus: f5,
                 controller: c6,
                 result: result[0],
@@ -149,19 +171,10 @@ class _OddsByFiveWorkoutState extends State<OddsByFiveWorkout> {
               ),
             ],
           ),
-          SizedBox(height: 10),
-          Text(
-            DigitHelper.listToDigit([
-              int.tryParse(c6.text) ?? 0,
-              int.tryParse(c5.text) ?? 0,
-              int.tryParse(c4.text) ?? 0,
-              int.tryParse(c3.text) ?? 0,
-              int.tryParse(c2.text) ?? 0,
-              int.tryParse(c1.text) ?? 0,
-            ]).toString(),
-          ),
-          Text("Your answer: $userAnswer", style: KTextStyle.body(context)),
+          SizedBox(height: 15),
 
+          Text("Your answer: $userAnswer", style: KTextStyle.body(context)),
+          SizedBox(height: 10),
           Text(
             isCorrect ? "✔ Correct!" : "✖ Wrong",
             style: KTextStyle.body(context).copyWith(
@@ -169,6 +182,19 @@ class _OddsByFiveWorkoutState extends State<OddsByFiveWorkout> {
               fontSize: 22,
             ),
           ),
+
+          Spacer(),
+          OutlinedButton(
+            focusNode: refreshBtnFocus,
+            style: OutlinedButton.styleFrom(
+              padding: const EdgeInsets.symmetric(horizontal: 34, vertical: 34),
+            ),
+            onPressed: () {
+              generateNewTask();
+            },
+            child: Icon(Icons.refresh),
+          ),
+          SizedBox(height: 40.0)
         ],
       ),
     );
