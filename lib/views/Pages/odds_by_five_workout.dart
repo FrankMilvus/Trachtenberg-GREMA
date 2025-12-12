@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:untitled2/constants/app_pages.dart';
-import 'package:untitled2/helper/digit_to_list.dart';
-import 'package:untitled2/helper/get_rnd.dart';
-import 'package:untitled2/helper/list_to_digit.dart';
+import 'package:untitled2/helper/DigitHelper.dart';
 import 'package:untitled2/widgets/one_digit_field.dart';
 
 import '../../constants/text_styles.dart';
@@ -30,19 +28,18 @@ class _OddsByFiveWorkoutState extends State<OddsByFiveWorkout> {
   final c5 = TextEditingController();
   final c6 = TextEditingController();
 
-  // late final int digit;
-  // late final List<int> result;
+  late final int digit;
+  late final List<int> result;
 
   @override
   void initState() {
     super.initState();
 
-    // const int multiplier = 5;
-    // var rnd = RndDigit.randomEven(count: multiplier);
-    //
-    // digit = rnd.number;                   // assign to state variable
-    // result = numberToList(digit * multiplier);
-    //
+    const int multiplier = 5;
+    final rnd = DigitHelper.randomEven(count: multiplier);
+
+    digit = rnd.number;
+    result = DigitHelper.numberToList(digit * multiplier);
 
     void listener() => setState(() {});
 
@@ -76,12 +73,21 @@ class _OddsByFiveWorkoutState extends State<OddsByFiveWorkout> {
     super.dispose();
   }
 
+  int get userAnswer {
+    return DigitHelper.listToDigit([
+      int.tryParse(c6.text) ?? 0,
+      int.tryParse(c5.text) ?? 0,
+      int.tryParse(c4.text) ?? 0,
+      int.tryParse(c3.text) ?? 0,
+      int.tryParse(c2.text) ?? 0,
+      int.tryParse(c1.text) ?? 0,
+    ]);
+  }
+
   @override
   Widget build(BuildContext context) {
-    const int multiplier = 5;
-    var rnd = RndDigit.randomEven(count: multiplier);
-    int digit = rnd.number;
-    var result = numberToList(digit * multiplier);
+    final correctAnswer = digit * 5;
+    final isCorrect = userAnswer == correctAnswer;
 
     return Scaffold(
       appBar: AppBar(
@@ -145,16 +151,24 @@ class _OddsByFiveWorkoutState extends State<OddsByFiveWorkout> {
           ),
           SizedBox(height: 10),
           Text(
-              listToDigit([
-                int.tryParse(c6.text) ?? 0,
-                int.tryParse(c5.text) ?? 0,
-                int.tryParse(c4.text) ?? 0,
-                int.tryParse(c3.text) ?? 0,
-                int.tryParse(c2.text) ?? 0,
-                int.tryParse(c1.text) ?? 0,
-              ]).toString()
+            DigitHelper.listToDigit([
+              int.tryParse(c6.text) ?? 0,
+              int.tryParse(c5.text) ?? 0,
+              int.tryParse(c4.text) ?? 0,
+              int.tryParse(c3.text) ?? 0,
+              int.tryParse(c2.text) ?? 0,
+              int.tryParse(c1.text) ?? 0,
+            ]).toString(),
           ),
-          Text('Your answer ${c6.text}', style: KTextStyle.body(context)),
+          Text("Your answer: $userAnswer", style: KTextStyle.body(context)),
+
+          Text(
+            isCorrect ? "✔ Correct!" : "✖ Wrong",
+            style: KTextStyle.body(context).copyWith(
+              color: isCorrect ? Colors.green : Colors.red,
+              fontSize: 22,
+            ),
+          ),
         ],
       ),
     );

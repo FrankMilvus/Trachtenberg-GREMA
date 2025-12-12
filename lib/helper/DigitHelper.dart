@@ -1,7 +1,5 @@
 import 'dart:math';
 
-import 'list_to_digit.dart';
-
 class EvenNumberResult {
   final List<int> digits;
   final int number;
@@ -9,18 +7,36 @@ class EvenNumberResult {
   EvenNumberResult(this.digits, this.number);
 }
 
-class RndDigit {
-  static final _random = Random();
+
+class DigitHelper {
+  static List<int> numberToList(int number) {
+    return number
+        .toString()
+        .split('')
+        .map((digit) => int.parse(digit))
+        .toList();
+  }
+
+  static int listToDigit(List<int> list) {
+    int digit = 0;
+
+    for (int i = 0; i < list.length; i++) {
+      digit = digit * 10 + list[i];
+    }
+    return digit;
+  }
 
   static EvenNumberResult randomEven({
     required int count,
     int min = 0,
     int max = 10,
   }) {
+    final random = Random();
+
     List<int> digits = [];
 
     for (int i = 0; i < count; i++) {
-      int n = _random.nextInt(max - min + 1) + min;
+      int n = random.nextInt(max - min + 1) + min;
       if (n.isOdd) n++;
       if (n > max) n -= 2;
       if (n == 10) n -= 2;
@@ -34,4 +50,3 @@ class RndDigit {
     return EvenNumberResult(digits, number);
   }
 }
-
