@@ -13,10 +13,10 @@ class FiveMultiExpScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Odds by five'), centerTitle: true,
-      leading: BackWidget(page: KAppPages.home,)),
+      leading: BackWidget(page: KAppPages.warmup,)),
       floatingActionButton: FabWidget(page: KAppPages.oddsByFiveWorkout,),
       body: SingleChildScrollView(
-        padding: const EdgeInsets.all(16),
+        padding: const EdgeInsets.symmetric(horizontal: 20.0),
         child: Column(
           children: [
             Text(KAppStrings.oddsByFiveMultiplicationExplanation,

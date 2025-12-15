@@ -1,3 +1,8 @@
+
+# Android signing
+android/app/trachtenberg_grema_key.jks
+android/app/key.properties
+
 # Miscellaneous
 *.class
 *.log

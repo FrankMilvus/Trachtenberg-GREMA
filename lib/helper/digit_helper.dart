@@ -7,7 +7,6 @@ class EvenNumberResult {
   EvenNumberResult(this.digits, this.number);
 }
 
-
 class DigitHelper {
   static List<int> numberToList(int number) {
     return number
@@ -48,5 +47,11 @@ class DigitHelper {
     int number = listToDigit(digits);
 
     return EvenNumberResult(digits, number);
+  }
+
+  static int randomNumber({required int max}) {
+    final random = Random();
+
+    return random.nextInt(max);
   }
 }

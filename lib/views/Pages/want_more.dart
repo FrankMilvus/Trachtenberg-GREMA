@@ -4,7 +4,6 @@ import '../../constants/app_pages.dart';
 import '../../constants/app_strings.dart';
 import '../../constants/text_styles.dart';
 import '../../widgets/back_widget.dart';
-import '../../widgets/fab_widget.dart';
 
 class WantMore extends StatelessWidget {
   const WantMore({super.key});

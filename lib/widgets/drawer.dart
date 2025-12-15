@@ -37,6 +37,14 @@ class DrawerWidget extends StatelessWidget {
           ),
           ListTile(
             leading: const Icon(Icons.arrow_circle_right_outlined),
+            title: const Text("Warm up"),
+            onTap: () {
+              selectedPageNotifier.value = KAppPages.warmup;
+              Navigator.pop(context);
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.arrow_circle_right_outlined),
             title: const Text("Odds by 5"),
             onTap: () {
               selectedPageNotifier.value = KAppPages.oddsByFiveExplication;

@@ -38,8 +38,7 @@ class _OneDigitFieldState extends State<OneDigitField> {
 
       setState(() {
         isCorrect = (value.isNotEmpty && value == widget.result.toString());
-        print("FIELD! $isCorrect");
-        print('FIELD! $value');
+
       });
     });
   }

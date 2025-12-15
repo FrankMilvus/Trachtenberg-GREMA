@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:untitled2/views/widget_tree.dart';
+import 'package:trachtenberg_grema/views/widget_tree.dart';
 
 import 'data/notifiers.dart';
 

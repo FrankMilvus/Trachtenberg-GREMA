@@ -13,10 +13,10 @@ class HelloScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text("What this app is?"), centerTitle: true),
 
-      floatingActionButton: FabWidget(page: KAppPages.oddsByFiveExplication),
+      floatingActionButton: FabWidget(page: KAppPages.warmup),
 
       body: Padding(
-        padding: const EdgeInsets.all(20.0),
+        padding: const EdgeInsets.symmetric(horizontal: 20.0),
         child: Center(child: Text(KAppStrings.hello, style: KTextStyle.body(context),)),
       ),
     );

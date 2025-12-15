@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:untitled2/constants/app_pages.dart';
-import 'package:untitled2/helper/DigitHelper.dart';
-import 'package:untitled2/widgets/one_digit_field.dart';
+import 'package:trachtenberg_grema/constants/app_pages.dart';
+import 'package:trachtenberg_grema/helper/digit_helper.dart';
+import 'package:trachtenberg_grema/widgets/one_digit_field.dart';
 
 import '../../constants/text_styles.dart';
 import '../../widgets/back_widget.dart';
@@ -60,12 +60,6 @@ class _OddsByFiveWorkoutState extends State<OddsByFiveWorkout> {
     super.initState();
 
     generateNewTask();
-
-    // const int multiplier = 5;
-    // final rnd = DigitHelper.randomEven(count: multiplier);
-    //
-    // digit = rnd.number;
-    // result = DigitHelper.numberToList(digit * multiplier);
 
     void listener() => setState(() {});
 
