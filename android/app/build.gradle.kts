@@ -26,7 +26,6 @@ android {
     }
 
     kotlinOptions {
-//        jvmTarget = JavaVersion.VERSION_17.toString()
         jvmTarget = JavaVersion.VERSION_17.toString()
     }
 //    kotlin {
@@ -43,15 +42,11 @@ android {
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
+        manifestPlaceholders += mapOf(
+            "flutterEmbedding" to "2",
+            "deferredComponentsEnabled" to false
+        )
     }
-//    val keyAlias = keystoreProperties["keyAlias"]?.toString()
-//        ?: throw GradleException("keyAlias missing in key.properties")
-//    val keyPassword = keystoreProperties["keyPassword"]?.toString()
-//        ?: throw GradleException("keyPassword missing in key.properties")
-//    val storePassword = keystoreProperties["storePassword"]?.toString()
-//        ?: throw GradleException("storePassword missing in key.properties")
-//    val storeFilePath = keystoreProperties["storeFile"]?.toString()
-//        ?: throw GradleException("storeFile missing in key.properties")
 
     signingConfigs {
         create("release") {
@@ -71,10 +66,27 @@ android {
             signingConfig = signingConfigs.getByName("release")
             isMinifyEnabled = true
             isShrinkResources = true
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
+            )
 
         }
     }
+
+
 }
+
+
+//dependencies {
+//    implementation("com.google.android.play:app-update:2.1.0")
+//    implementation("com.google.android.play:app-update-ktx:2.1.0")
+//    implementation("com.google.android.play:review:2.0.2")
+//    implementation("com.google.android.play:review-ktx:2.0.2")
+//    implementation("com.google.android.play:asset-delivery:2.3.0")
+//    implementation("com.google.android.play:asset-delivery-ktx:2.3.0")
+//    implementation("com.google.android.play:feature-delivery:2.1.0")
+//    implementation("com.google.android.play:feature-delivery-ktx:2.1.0")
+//}
 
 flutter {
     source = "../.."
