@@ -1,6 +1,6 @@
 
 # Android signing
-android/app/trachtenberg_grema_key.jks
+*.jks
 android/app/key.properties
 
 # Miscellaneous

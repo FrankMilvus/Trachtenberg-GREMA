@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
-import '../data/notifiers.dart';
+import 'package:provider/provider.dart';
+import 'package:trachtenberg_grema/providers/app_provider.dart';
 
 class BackWidget extends StatelessWidget {
   final int page;
@@ -10,7 +10,7 @@ class BackWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return IconButton(
       onPressed: () {
-        selectedPageNotifier.value = page;
+        context.read<AppProvider>().setPage(page);
       },
       icon: const Icon(Icons.arrow_back),
     );

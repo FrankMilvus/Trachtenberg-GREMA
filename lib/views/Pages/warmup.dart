@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:trachtenberg_grema/constants/btn_styles.dart';
-import 'package:trachtenberg_grema/data/notifiers.dart';
 import 'package:trachtenberg_grema/helper/digit_helper.dart';
+import 'package:trachtenberg_grema/providers/app_provider.dart';
 import 'package:trachtenberg_grema/widgets/warmup_answer_widget.dart';
 
 import '../../constants/app_pages.dart';
@@ -22,17 +23,24 @@ class _WarmUpState extends State<WarmUp> {
   int _firstNumber = 0;
   int _secondNumber = 0;
   final controller = TextEditingController();
-  ValueNotifier<bool> isTextCorrectNotifier = ValueNotifier(false);
 
   bool isFirstMax = false;
   bool isSecondMax = false;
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      generateNewTask();
+    });
+  }
 
   void generateNewTask() {
     setState(() {
       _firstNumber = DigitHelper.randomNumber(max: isFirstMax ? 100 : 10);
       _secondNumber = DigitHelper.randomNumber(max: isSecondMax ? 100 : 10);
       controller.clear();
-      isTextCorrect.value = false;
+      context.read<AppProvider>().setTextCorrect(false);
     });
   }
 
@@ -40,11 +48,11 @@ class _WarmUpState extends State<WarmUp> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Warm up"),
+        title: const Text("Warm up"),
         centerTitle: true,
-        leading: BackWidget(page: KAppPages.home),
+        leading: const BackWidget(page: KAppPages.home),
       ),
-      floatingActionButton: FabWidget(page: KAppPages.oddsByFiveExplication),
+      floatingActionButton: const FabWidget(page: KAppPages.oddsByFiveExplication),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20.0),
         child: Column(
@@ -63,12 +71,11 @@ class _WarmUpState extends State<WarmUp> {
                   },
                   child: Text(Operation.add.symbol),
                 ),
-
                 OutlinedButton(
-                    style: KBtnStyle.operatorButton(
-                      current: _selectedOperation,
-                      button: Operation.subtract,
-                    ),
+                  style: KBtnStyle.operatorButton(
+                    current: _selectedOperation,
+                    button: Operation.subtract,
+                  ),
                   onPressed: () {
                     setState(() => _selectedOperation = Operation.subtract);
                   },
@@ -95,10 +102,10 @@ class _WarmUpState extends State<WarmUp> {
                   child: Text(Operation.divide.symbol),
                 ),
                 OutlinedButton(
-                    style: KBtnStyle.operatorButton(
-                      current: _selectedOperation,
-                      button: Operation.modulo,
-                    ),
+                  style: KBtnStyle.operatorButton(
+                    current: _selectedOperation,
+                    button: Operation.modulo,
+                  ),
                   onPressed: () {
                     setState(() => _selectedOperation = Operation.modulo);
                   },
@@ -117,7 +124,7 @@ class _WarmUpState extends State<WarmUp> {
                     });
                     generateNewTask();
                   },
-                  child: Text('0 - 9'),
+                  child: const Text('0 - 9'),
                 ),
                 OutlinedButton(
                   style: KBtnStyle.rangeButton(),
@@ -127,7 +134,7 @@ class _WarmUpState extends State<WarmUp> {
                       generateNewTask();
                     });
                   },
-                  child: Text('0 - 9'),
+                  child: const Text('0 - 9'),
                 ),
               ],
             ),
@@ -142,7 +149,7 @@ class _WarmUpState extends State<WarmUp> {
                       generateNewTask();
                     });
                   },
-                  child: Text('0 - 99'),
+                  child: const Text('0 - 99'),
                 ),
                 OutlinedButton(
                   style: KBtnStyle.rangeButton(),
@@ -152,25 +159,23 @@ class _WarmUpState extends State<WarmUp> {
                       generateNewTask();
                     });
                   },
-                  child: Text('0 - 99'),
+                  child: const Text('0 - 99'),
                 ),
               ],
             ),
-            SizedBox(height: 15),
+            const SizedBox(height: 15),
             Text(
               '$_firstNumber ${_selectedOperation.symbol} $_secondNumber = ???',
-
               style: KTextStyle.digit(context),
             ),
             WarmupAnswerWidget(
               controller: controller,
               result: _selectedOperation.calculate(_firstNumber, _secondNumber),
-              isTextCorrectNotifier: isTextCorrect,
               onSubmit: () {
                 generateNewTask();
               },
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
           ],
         ),
       ),

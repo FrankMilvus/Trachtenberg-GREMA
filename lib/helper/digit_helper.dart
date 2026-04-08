@@ -31,21 +31,29 @@ class DigitHelper {
     int max = 10,
   }) {
     final random = Random();
-
     List<int> digits = [];
 
     for (int i = 0; i < count; i++) {
-      int n = random.nextInt(max - min + 1) + min;
-      if (n.isOdd) n++;
-      if (n > max) n -= 2;
-      if (n == 10) n -= 2;
-      digits.add(n);
+      // Generate a random even number in [min, max]
+      // Ensure the range contains at least one even number
+      int start = min.isEven ? min : min + 1;
+      int end = max.isEven ? max : max - 1;
+
+      if (start > end) {
+        digits.add(start); // Fallback
+      } else {
+        int evenCount = ((end - start) ~/ 2) + 1;
+        int n = start + (random.nextInt(evenCount) * 2);
+        digits.add(n);
+      }
     }
 
-    if (digits[0] == 0) digits[0] += 2;
+    // Ensure the first digit is not zero to maintain the requested digit count
+    if (digits[0] == 0) {
+      digits[0] = 2 + (random.nextInt(4) * 2); // Random even 2, 4, 6, 8
+    }
 
     int number = listToDigit(digits);
-
     return EvenNumberResult(digits, number);
   }
 

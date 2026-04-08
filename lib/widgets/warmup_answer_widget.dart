@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:provider/provider.dart';
+import 'package:trachtenberg_grema/providers/app_provider.dart';
 
 import '../constants/text_styles.dart';
 
 class WarmupAnswerWidget extends StatefulWidget {
   final TextEditingController controller;
   final int result;
-  final ValueNotifier<bool> isTextCorrectNotifier;
   final VoidCallback? onSubmit;
 
   const WarmupAnswerWidget({
     super.key,
     required this.controller,
     required this.result,
-    required this.isTextCorrectNotifier,
     this.onSubmit,
   });
 
@@ -30,16 +30,16 @@ class _WarmupAnswerWidgetState extends State<WarmupAnswerWidget> {
 
     widget.controller.addListener(() {
       final value = widget.controller.text;
-      widget.isTextCorrectNotifier.value =
-          value.isNotEmpty && value == widget.result.toString();
+      final isCorrect = value.isNotEmpty && value == widget.result.toString();
+      context.read<AppProvider>().setTextCorrect(isCorrect);
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    return ValueListenableBuilder<bool>(
-      valueListenable: widget.isTextCorrectNotifier,
-      builder: (context, isCorrect, child) {
+    return Consumer<AppProvider>(
+      builder: (context, appProvider, child) {
+        final isCorrect = appProvider.isTextCorrect;
         return Column(
           children: [
             SizedBox(
@@ -51,7 +51,6 @@ class _WarmupAnswerWidgetState extends State<WarmupAnswerWidget> {
                 decoration: const InputDecoration(
                   counterText: '',
                   hintText: 'Enter answer here',
-                  // border: InputBorder.none,
                 ),
                 maxLength: 6,
                 keyboardType: TextInputType.number,
@@ -67,7 +66,7 @@ class _WarmupAnswerWidgetState extends State<WarmupAnswerWidget> {
                 },
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Text(
               isCorrect ? "✔ Correct!" : "✖ Wrong",
               style: KTextStyle.body(context).copyWith(

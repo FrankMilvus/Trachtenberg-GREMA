@@ -11,13 +11,16 @@ class HelloScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("What this app is?"), centerTitle: true),
-
-      floatingActionButton: FabWidget(page: KAppPages.warmup),
-
+      appBar: AppBar(title: const Text("What this app is?"), centerTitle: true),
+      floatingActionButton: const FabWidget(page: KAppPages.warmup),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20.0),
-        child: Center(child: Text(KAppStrings.hello, style: KTextStyle.body(context),)),
+        child: Center(
+          child: Text(
+            KAppStrings.hello,
+            style: KTextStyle.body(context),
+          ),
+        ),
       ),
     );
   }
