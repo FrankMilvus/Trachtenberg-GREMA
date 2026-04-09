@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:trachtenberg_grema/l10n/app_localizations.dart';
 import 'package:trachtenberg_grema/constants/app_pages.dart';
 import 'package:trachtenberg_grema/helper/digit_helper.dart';
 import 'package:trachtenberg_grema/widgets/multi_digit_input.dart';
@@ -41,12 +42,13 @@ class _OddsByFiveWorkoutState extends State<OddsByFiveWorkout> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     final correctAnswer = digit * 5;
     final isCorrect = userAnswer == correctAnswer;
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Workout"),
+        title: Text(l10n.workout),
         centerTitle: true,
         leading: const BackWidget(page: KAppPages.oddsByFiveExplication),
       ),
@@ -67,10 +69,10 @@ class _OddsByFiveWorkoutState extends State<OddsByFiveWorkout> {
             },
           ),
           const SizedBox(height: 15),
-          Text("Your answer: $userAnswer", style: KTextStyle.body(context)),
+          Text(l10n.yourAnswer(userAnswer.toString()), style: KTextStyle.body(context)),
           const SizedBox(height: 10),
           Text(
-            isCorrect ? "✔ Correct!" : "✖ Wrong",
+            isCorrect ? l10n.correct : l10n.wrong,
             style: KTextStyle.body(context).copyWith(
               color: isCorrect ? Colors.green : Colors.red,
               fontSize: 22,

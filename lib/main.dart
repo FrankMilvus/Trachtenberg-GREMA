@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:trachtenberg_grema/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:trachtenberg_grema/providers/app_provider.dart';
 import 'package:trachtenberg_grema/views/widget_tree.dart';
@@ -22,6 +24,20 @@ class MyApp extends StatelessWidget {
         return MaterialApp(
           title: 'NeuroCalT',
           debugShowCheckedModeBanner: false,
+          locale: appProvider.locale,
+          localizationsDelegates: const [
+            AppLocalizations.delegate,
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+          ],
+          supportedLocales: const [
+            Locale('en'),
+            Locale('es'),
+            Locale('de'),
+            Locale('fr'),
+            Locale('ru'),
+          ],
           theme: ThemeData(
             colorScheme: ColorScheme.fromSeed(
               seedColor: Colors.deepPurple,

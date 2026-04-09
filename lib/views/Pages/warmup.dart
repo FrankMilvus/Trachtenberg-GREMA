@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:trachtenberg_grema/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:trachtenberg_grema/constants/btn_styles.dart';
 import 'package:trachtenberg_grema/helper/digit_helper.dart';
@@ -46,9 +47,10 @@ class _WarmUpState extends State<WarmUp> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Warm up"),
+        title: Text(l10n.warmUp),
         centerTitle: true,
         leading: const BackWidget(page: KAppPages.home),
       ),
