@@ -4,8 +4,11 @@ import 'package:trachtenberg_grema/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:trachtenberg_grema/providers/app_provider.dart';
 import 'package:trachtenberg_grema/views/widget_tree.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 void main() {
+  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   runApp(
     ChangeNotifierProvider(
       create: (context) => AppProvider(),
@@ -21,6 +24,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Consumer<AppProvider>(
       builder: (context, appProvider, child) {
+        FlutterNativeSplash.remove();
         return MaterialApp(
           title: 'NeuroCalT',
           debugShowCheckedModeBanner: false,

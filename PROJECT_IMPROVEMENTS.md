@@ -20,13 +20,9 @@ This document outlines potential improvements, optimizations, and redesign sugge
 *   **Unit Tests:** Add tests for `DigitHelper` to ensure number generation and list conversion logic is flawless.
 *   **Widget Tests:** Create tests for the workout screens to verify that user input correctly triggers the "Correct/Wrong" state.
 
-### Localization (i18n)
-*   **Improvement:** Move hardcoded strings (e.g., "Warm up", "Your answer", "Correct!") into ARB files using `flutter_localizations`.
-*   **Benefit:** Makes the app ready for a global audience.
 
 ### Linting
 *   **Improvement:** Review `analysis_options.yaml` and enable stricter lint rules to maintain high code quality.
 
 ## 3. Assets & Branding
 *   **Icon:** The `pubspec.yaml` mentions an old-man icon. Ensure high-resolution variants are provided for all platforms.
-*   **Splash Screen:** Add a native splash screen using `flutter_native_splash` for a more professional startup experience.
