@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:trachtenberg_grema/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:trachtenberg_grema/constants/btn_styles.dart';
 import 'package:trachtenberg_grema/helper/digit_helper.dart';
+import 'package:trachtenberg_grema/l10n/app_localizations.dart';
 import 'package:trachtenberg_grema/providers/app_provider.dart';
 import 'package:trachtenberg_grema/widgets/warmup_answer_widget.dart';
 
@@ -54,7 +54,9 @@ class _WarmUpState extends State<WarmUp> {
         centerTitle: true,
         leading: const BackWidget(page: KAppPages.home),
       ),
-      floatingActionButton: const FabWidget(page: KAppPages.oddsByFiveExplication),
+      floatingActionButton: const FabWidget(
+        page: KAppPages.oddsByFiveExplication,
+      ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20.0),
         child: Column(
@@ -65,6 +67,7 @@ class _WarmUpState extends State<WarmUp> {
               children: [
                 OutlinedButton(
                   style: KBtnStyle.operatorButton(
+                    context: context,
                     current: _selectedOperation,
                     button: Operation.add,
                   ),
@@ -75,6 +78,7 @@ class _WarmUpState extends State<WarmUp> {
                 ),
                 OutlinedButton(
                   style: KBtnStyle.operatorButton(
+                    context: context,
                     current: _selectedOperation,
                     button: Operation.subtract,
                   ),
@@ -85,6 +89,7 @@ class _WarmUpState extends State<WarmUp> {
                 ),
                 OutlinedButton(
                   style: KBtnStyle.operatorButton(
+                    context: context,
                     current: _selectedOperation,
                     button: Operation.multiply,
                   ),
@@ -95,6 +100,7 @@ class _WarmUpState extends State<WarmUp> {
                 ),
                 OutlinedButton(
                   style: KBtnStyle.operatorButton(
+                    context: context,
                     current: _selectedOperation,
                     button: Operation.divide,
                   ),
@@ -105,6 +111,7 @@ class _WarmUpState extends State<WarmUp> {
                 ),
                 OutlinedButton(
                   style: KBtnStyle.operatorButton(
+                    context: context,
                     current: _selectedOperation,
                     button: Operation.modulo,
                   ),
@@ -119,7 +126,7 @@ class _WarmUpState extends State<WarmUp> {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 OutlinedButton(
-                  style: KBtnStyle.rangeButton(),
+                  style: KBtnStyle.rangeButton(context),
                   onPressed: () {
                     setState(() {
                       isFirstMax = false;
@@ -129,7 +136,7 @@ class _WarmUpState extends State<WarmUp> {
                   child: const Text('0 - 9'),
                 ),
                 OutlinedButton(
-                  style: KBtnStyle.rangeButton(),
+                  style: KBtnStyle.rangeButton(context),
                   onPressed: () {
                     setState(() {
                       isSecondMax = false;
@@ -144,7 +151,7 @@ class _WarmUpState extends State<WarmUp> {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 OutlinedButton(
-                  style: KBtnStyle.rangeButton(),
+                  style: KBtnStyle.rangeButton(context),
                   onPressed: () {
                     setState(() {
                       isFirstMax = true;
@@ -154,7 +161,7 @@ class _WarmUpState extends State<WarmUp> {
                   child: const Text('0 - 99'),
                 ),
                 OutlinedButton(
-                  style: KBtnStyle.rangeButton(),
+                  style: KBtnStyle.rangeButton(context),
                   onPressed: () {
                     setState(() {
                       isSecondMax = true;

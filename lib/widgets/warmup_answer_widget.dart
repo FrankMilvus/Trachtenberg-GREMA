@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:trachtenberg_grema/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
+import 'package:trachtenberg_grema/l10n/app_localizations.dart';
 import 'package:trachtenberg_grema/providers/app_provider.dart';
 
 import '../constants/text_styles.dart';
@@ -72,7 +72,9 @@ class _WarmupAnswerWidgetState extends State<WarmupAnswerWidget> {
             Text(
               isCorrect ? l10n.correct : l10n.wrong,
               style: KTextStyle.body(context).copyWith(
-                color: isCorrect ? Colors.green : Colors.red,
+                color: isCorrect
+                    ? Theme.of(context).colorScheme.secondary
+                    : Theme.of(context).colorScheme.error,
                 fontSize: 22,
               ),
             ),

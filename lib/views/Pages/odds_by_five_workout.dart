@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:trachtenberg_grema/l10n/app_localizations.dart';
 import 'package:trachtenberg_grema/constants/app_pages.dart';
 import 'package:trachtenberg_grema/helper/digit_helper.dart';
+import 'package:trachtenberg_grema/l10n/app_localizations.dart';
 import 'package:trachtenberg_grema/widgets/multi_digit_input.dart';
 
 import '../../constants/text_styles.dart';
@@ -74,7 +74,9 @@ class _OddsByFiveWorkoutState extends State<OddsByFiveWorkout> {
           Text(
             isCorrect ? l10n.correct : l10n.wrong,
             style: KTextStyle.body(context).copyWith(
-              color: isCorrect ? Colors.green : Colors.red,
+              color: isCorrect
+                  ? Theme.of(context).colorScheme.secondary
+                  : Theme.of(context).colorScheme.error,
               fontSize: 22,
             ),
           ),

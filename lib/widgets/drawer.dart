@@ -4,7 +4,6 @@ import 'package:trachtenberg_grema/l10n/app_localizations.dart';
 import 'package:trachtenberg_grema/providers/app_provider.dart';
 
 import '/constants/app_pages.dart';
-import '../constants/colors.dart';
 
 class DrawerWidget extends StatelessWidget {
   const DrawerWidget({super.key});
@@ -18,18 +17,25 @@ class DrawerWidget extends StatelessWidget {
           return ListView(
             children: [
               DrawerHeader(
-                decoration: BoxDecoration(color: KColors.basicColor(context)),
+                decoration: BoxDecoration(
+                  color: Theme.of(context).colorScheme.primary,
+                ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(l10n.appTitle),
+                    Text(
+                      l10n.appTitle,
+                      style: TextStyle(
+                        color: Theme.of(context).colorScheme.onPrimary,
+                      ),
+                    ),
                     IconButton(
                       onPressed: () {
                         appProvider.toggleTheme();
                       },
-                      icon: const Icon(
+                      icon: Icon(
                         Icons.dark_mode,
-                        color: Colors.white,
+                        color: Theme.of(context).colorScheme.onPrimary,
                         size: 28,
                       ),
                     ),
