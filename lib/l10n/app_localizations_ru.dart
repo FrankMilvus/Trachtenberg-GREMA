@@ -50,6 +50,12 @@ class AppLocalizationsRu extends AppLocalizations {
   String get wantMoreTitle => 'Хотите больше?';
 
   @override
+  String get next => 'Далее';
+
+  @override
+  String get back => 'Назад';
+
+  @override
   String get home => 'Главная';
 
   @override

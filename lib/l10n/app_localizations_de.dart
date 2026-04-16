@@ -50,6 +50,12 @@ class AppLocalizationsDe extends AppLocalizations {
   String get wantMoreTitle => 'Mehr gewollt?';
 
   @override
+  String get next => 'Weiter';
+
+  @override
+  String get back => 'Zurück';
+
+  @override
   String get home => 'Startseite';
 
   @override

@@ -176,6 +176,18 @@ abstract class AppLocalizations {
   /// **'Want more?'**
   String get wantMoreTitle;
 
+  /// Label for next page action
+  ///
+  /// In en, this message translates to:
+  /// **'Next'**
+  String get next;
+
+  /// Label for back page action
+  ///
+  /// In en, this message translates to:
+  /// **'Back'**
+  String get back;
+
   /// Menu label for home screen
   ///
   /// In en, this message translates to:

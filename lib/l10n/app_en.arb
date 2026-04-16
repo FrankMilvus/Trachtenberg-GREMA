@@ -53,6 +53,14 @@
   "@wantMoreTitle": {
     "description": "Menu label for the Want More page"
   },
+  "next": "Next",
+  "@next": {
+    "description": "Label for next page action"
+  },
+  "back": "Back",
+  "@back": {
+    "description": "Label for back page action"
+  },
   "home": "Home",
   "@home": {
     "description": "Menu label for home screen"

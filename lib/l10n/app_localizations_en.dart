@@ -50,6 +50,12 @@ class AppLocalizationsEn extends AppLocalizations {
   String get wantMoreTitle => 'Want more?';
 
   @override
+  String get next => 'Next';
+
+  @override
+  String get back => 'Back';
+
+  @override
   String get home => 'Home';
 
   @override

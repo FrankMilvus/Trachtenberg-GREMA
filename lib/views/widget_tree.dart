@@ -5,6 +5,7 @@ import 'package:trachtenberg_grema/providers/app_provider.dart';
 import 'package:trachtenberg_grema/views/Pages/odds_by_five_workout.dart';
 import 'package:trachtenberg_grema/views/Pages/want_more.dart';
 import 'package:trachtenberg_grema/views/Pages/warmup.dart';
+import 'package:trachtenberg_grema/widgets/nav_bar.dart';
 
 import '../widgets/drawer.dart';
 import 'Pages/hello_screen.dart';
@@ -50,6 +51,33 @@ class WidgetTree extends StatelessWidget {
       body: Consumer<AppProvider>(
         builder: (context, appProvider, _) {
           return pages[appProvider.selectedPage];
+        },
+      ),
+      bottomNavigationBar: Consumer<AppProvider>(
+        builder: (context, appProvider, _) {
+          return NavbarWidget(
+            currentIndex: 1,
+            onTap: (index) {
+              final currentPage = appProvider.selectedPage;
+              final lastPageIndex = pages.length - 1;
+
+              switch (index) {
+                case 0:
+                  if (currentPage > 0) {
+                    appProvider.setPage(currentPage - 1);
+                  }
+                  break;
+                case 1:
+                  appProvider.setPage(1);
+                  break;
+                case 2:
+                  if (currentPage < lastPageIndex) {
+                    appProvider.setPage(currentPage + 1);
+                  }
+                  break;
+              }
+            },
+          );
         },
       ),
     );

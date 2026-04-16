@@ -16,12 +16,7 @@ class HelloScreen extends StatelessWidget {
       floatingActionButton: const FabWidget(page: KAppPages.warmup),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20.0),
-        child: Center(
-          child: Text(
-            l10n.hello,
-            style: KTextStyle.body(context),
-          ),
-        ),
+        child: Center(child: Text(l10n.hello, style: KTextStyle.body(context))),
       ),
     );
   }
