@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:trachtenberg_grema/l10n/app_localizations.dart';
 import 'package:trachtenberg_grema/providers/app_provider.dart';
 import 'package:trachtenberg_grema/views/Pages/odds_by_five_workout.dart';
 import 'package:trachtenberg_grema/views/Pages/want_more.dart';
@@ -22,9 +23,10 @@ class WidgetTree extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     return Scaffold(
       appBar: AppBar(
-        title: const Text("NeuroCalT+"),
+        title: Text(l10n.appTitle),
         centerTitle: true,
         actions: [
           Consumer<AppProvider>(

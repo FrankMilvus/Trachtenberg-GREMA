@@ -9,11 +9,14 @@ class AppLocalizationsEn extends AppLocalizations {
   AppLocalizationsEn([String locale = 'en']) : super(locale);
 
   @override
+  String get appTitle => 'NeuroCalT+';
+
+  @override
   String get hello =>
       'Hey guys! I am glad to see any of you here! This app is my pet project. And main target of this app create a sandbox to train fast mental counting skills';
 
   @override
-  String get whatIsThisApp => 'What this app is?';
+  String get whatIsThisApp => 'What is this app?';
 
   @override
   String get oddsByFiveExplanation =>

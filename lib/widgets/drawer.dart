@@ -22,7 +22,7 @@ class DrawerWidget extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Text("NeuroCalT"),
+                    Text(l10n.appTitle),
                     IconButton(
                       onPressed: () {
                         appProvider.toggleTheme();

@@ -9,6 +9,9 @@ class AppLocalizationsFr extends AppLocalizations {
   AppLocalizationsFr([String locale = 'fr']) : super(locale);
 
   @override
+  String get appTitle => 'NeuroCalT+';
+
+  @override
   String get hello =>
       'Salut les gars ! Je suis ravi de vous voir ici ! Cette application est mon projet personnel. L\'objectif principal est de créer un bac à sable pour s\'entraîner au calcul mental rapide.';
 

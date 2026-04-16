@@ -1,5 +1,6 @@
 {
   "@@locale": "fr",
+  "appTitle": "NeuroCalT+",
   "hello": "Salut les gars ! Je suis ravi de vous voir ici ! Cette application est mon projet personnel. L'objectif principal est de créer un bac à sable pour s'entraîner au calcul mental rapide.",
   "whatIsThisApp": "C'est quoi cette application ?",
   "oddsByFiveExplanation": "Règle : Pour multiplier un nombre par 5 en utilisant cette méthode :👉 Prenez la moitié du chiffre suivant (le « voisin »).\n👉 Si le chiffre actuel est impair, ajoutez 5 au résultat.\nExemple : Multiplier 426 × 5\nOn écrit le nombre avec un zéro de tête :\n0 4 2 6 × 5\nMaintenant, traitez chaque chiffre de droite à gauche :\n1️⃣ Dernier chiffre : 6\nLe voisin n'existe pas (traitez-le comme 0).\n6 est pair, donc on n'ajoute pas 5.\nRésultat : 3 (la moitié de 6)\n2️⃣ Chiffre suivant : 2\nLe voisin est 6 → la moitié de 6 est 3\n2 est pair, donc on n'ajoute rien.\nRésultat : 3\n3️⃣ Chiffre suivant : 4\nLe voisin est 2 → la moitié de 2 est 1\n4 est pair, donc pas de +5\nRésultat : 1\n4️⃣ Premier chiffre : 0\nLe voisin est 4 → la moitié de 4 est 2\n0 est pair\nRésultat : 2\nRésultat Final\nLecture des résultats de gauche à droite :\n426 × 5 = 2130\n",

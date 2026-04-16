@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:trachtenberg_grema/l10n/app_localizations.dart';
 
 import '../../constants/app_pages.dart';
-import '../../constants/app_strings.dart';
 import '../../widgets/back_widget.dart';
 import '../../widgets/fab_widget.dart';
 
@@ -10,15 +10,18 @@ class HelloScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     return Scaffold(
-      appBar: AppBar(title: Text("What this app is?"), centerTitle: true,
-      leading: BackWidget(page: KAppPages.home)),
-
-      floatingActionButton: FabWidget(page: KAppPages.oddsByFiveExplication,),
-
-      body: Center(
-        child: Text(KAppStrings.hello),
+      appBar: AppBar(
+        title: Text(l10n.whatIsThisApp),
+        centerTitle: true,
+        leading: const BackWidget(page: KAppPages.home),
       ),
+      floatingActionButton: const FabWidget(
+        page: KAppPages.oddsByFiveExplication,
+      ),
+
+      body: Center(child: Text(l10n.hello)),
     );
   }
 }

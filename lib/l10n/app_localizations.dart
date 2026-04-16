@@ -104,85 +104,91 @@ abstract class AppLocalizations {
     Locale('ru'),
   ];
 
-  /// No description provided for @hello.
+  /// Main app title shown in the app bar and drawer header
+  ///
+  /// In en, this message translates to:
+  /// **'NeuroCalT+'**
+  String get appTitle;
+
+  /// Intro text shown on the welcome page
   ///
   /// In en, this message translates to:
   /// **'Hey guys! I am glad to see any of you here! This app is my pet project. And main target of this app create a sandbox to train fast mental counting skills'**
   String get hello;
 
-  /// No description provided for @whatIsThisApp.
+  /// Title for the screen that explains the app
   ///
   /// In en, this message translates to:
-  /// **'What this app is?'**
+  /// **'What is this app?'**
   String get whatIsThisApp;
 
-  /// No description provided for @oddsByFiveExplanation.
+  /// Instructional explanation text for the multiply-by-five method
   ///
   /// In en, this message translates to:
   /// **'Rule: To multiply a number by 5 using\nthis method:👉 Take half of the next digit (the “neighbor”).\n👉 If the current digit is odd, add 5 to the result.\nExample: Multiply 426 × 5\nWe write the number with a leading zero to make the process easier:\n0 4 2 6 × 5\nNow process each digit from right to left:\n1️⃣ Last digit: 6\nThe neighbor does not exist (treat it as 0).\n6 is even, so we do not add 5.\nResult: 3 (half of 6)\n2️⃣ Next digit: 2\nNeighbor is 6 → half of 6 is 3\n2 is even, so add nothing.\nResult: 3\n3️⃣ Next digit: 4\nNeighbor is 2 → half of 2 is 1\n4 is even, so no +5\nResult: 1\n4️⃣ First digit: 0\nNeighbor is 4 → half of 4 is 2\n0 is even\nResult: 2\nFinal Answer\nReading results left → right:\n426 × 5 = 2130\n'**
   String get oddsByFiveExplanation;
 
-  /// No description provided for @wantMore.
+  /// Long text shown on the Want More page
   ///
   /// In en, this message translates to:
   /// **'Hello I am glad to see u here!!\n\nThe thing is that it is only my pet project to understand better how Flutter works\nI am not sure it is useful or not I think that it a much more good apps that this one\nand I can realize all functions in this app but they does not teach me something new\nbut If you want I add more - just make comment in Google Play and write what\n do u wanna more)'**
   String get wantMore;
 
-  /// No description provided for @warmUp.
+  /// Menu label for the warm-up section
   ///
   /// In en, this message translates to:
   /// **'Warm up'**
   String get warmUp;
 
-  /// No description provided for @yourAnswer.
+  /// Label that displays the current user answer
   ///
   /// In en, this message translates to:
   /// **'Your answer: {answer}'**
   String yourAnswer(String answer);
 
-  /// No description provided for @correct.
+  /// Feedback text shown for a correct answer
   ///
   /// In en, this message translates to:
   /// **'✔ Correct!'**
   String get correct;
 
-  /// No description provided for @wrong.
+  /// Feedback text shown for an incorrect answer
   ///
   /// In en, this message translates to:
   /// **'✖ Wrong'**
   String get wrong;
 
-  /// No description provided for @oddsByFive.
+  /// Menu label for the odds-by-five explanation page
   ///
   /// In en, this message translates to:
   /// **'Odds by 5'**
   String get oddsByFive;
 
-  /// No description provided for @workout.
+  /// Menu label for the workout section
   ///
   /// In en, this message translates to:
   /// **'Work out'**
   String get workout;
 
-  /// No description provided for @wantMoreTitle.
+  /// Menu label for the Want More page
   ///
   /// In en, this message translates to:
   /// **'Want more?'**
   String get wantMoreTitle;
 
-  /// No description provided for @home.
+  /// Menu label for home screen
   ///
   /// In en, this message translates to:
   /// **'Home'**
   String get home;
 
-  /// No description provided for @enterAnswer.
+  /// Hint text for answer input field
   ///
   /// In en, this message translates to:
   /// **'Enter answer here'**
   String get enterAnswer;
 
-  /// No description provided for @language.
+  /// Label for language selector
   ///
   /// In en, this message translates to:
   /// **'Language'**

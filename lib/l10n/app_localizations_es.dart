@@ -9,6 +9,9 @@ class AppLocalizationsEs extends AppLocalizations {
   AppLocalizationsEs([String locale = 'es']) : super(locale);
 
   @override
+  String get appTitle => 'NeuroCalT+';
+
+  @override
   String get hello =>
       '¡Hola chicos! ¡Me alegra ver a cualquiera de ustedes aquí! Esta aplicación es mi proyecto personal. Y el objetivo principal de esta aplicación es crear un arenero para entrenar habilidades de cálculo mental rápido';
 
@@ -21,7 +24,7 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get wantMore =>
-      '¡Hola, me alegra verte aquí!\n\nLo que pasa es что es solo mi proyecto personal para entender mejor cómo funciona Flutter. No estoy seguro de si es útil o no, creo que hay aplicaciones mucho mejores que esta y puedo implementar todas las funciones en esta aplicación, pero no me enseñan nada nuevo. Pero si quieres que añada más, solo deja un comentario en Google Play y escribe qué más te gustaría)';
+      '¡Hola, me alegra verte aquí!\n\nLo que pasa es que es solo mi proyecto personal para entender mejor cómo funciona Flutter. No estoy seguro de si es útil o no, creo que hay aplicaciones mucho mejores que esta y puedo implementar todas las funciones en esta aplicación, pero no me enseñan nada nuevo. Pero si quieres que añada más, solo deja un comentario en Google Play y escribe qué más te gustaría)';
 
   @override
   String get warmUp => 'Calentamiento';
