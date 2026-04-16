@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:trachtenberg_grema/l10n/app_localizations.dart';
 
-import '../../constants/app_pages.dart';
-import '../../widgets/back_widget.dart';
-import '../../widgets/fab_widget.dart';
-
 class HelloScreen extends StatelessWidget {
   const HelloScreen({super.key});
 
@@ -15,12 +11,12 @@ class HelloScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(l10n.whatIsThisApp),
         centerTitle: true,
-        leading: const BackWidget(page: KAppPages.home),
+        // leading: const BackWidget(page: KAppPages.home),
       ),
+
       // floatingActionButton: const FabWidget(
       //   page: KAppPages.oddsByFiveExplication,
       // ),
-
       body: Center(child: Text(l10n.hello)),
     );
   }

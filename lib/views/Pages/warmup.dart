@@ -51,7 +51,7 @@ class _WarmUpState extends State<WarmUp> {
       appBar: AppBar(
         title: Text(l10n.warmUp),
         centerTitle: true,
-        leading: const BackWidget(page: KAppPages.home),
+        // leading: const BackWidget(page: KAppPages.home),
       ),
       // floatingActionButton: const FabWidget(
       //   page: KAppPages.oddsByFiveExplication,

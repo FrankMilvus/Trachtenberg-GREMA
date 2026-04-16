@@ -50,7 +50,7 @@ class _OddsByFiveWorkoutState extends State<OddsByFiveWorkout> {
       appBar: AppBar(
         title: Text(l10n.workout),
         centerTitle: true,
-        leading: const BackWidget(page: KAppPages.oddsByFiveExplication),
+        // leading: const BackWidget(page: KAppPages.oddsByFiveExplication),
       ),
       // floatingActionButton: const FabWidget(page: KAppPages.wantMore),
       body: Column(
