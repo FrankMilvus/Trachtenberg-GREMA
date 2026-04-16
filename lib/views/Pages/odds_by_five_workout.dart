@@ -6,7 +6,6 @@ import 'package:trachtenberg_grema/widgets/multi_digit_input.dart';
 
 import '../../constants/text_styles.dart';
 import '../../widgets/back_widget.dart';
-import '../../widgets/fab_widget.dart';
 
 class OddsByFiveWorkout extends StatefulWidget {
   const OddsByFiveWorkout({super.key});
@@ -16,7 +15,8 @@ class OddsByFiveWorkout extends StatefulWidget {
 }
 
 class _OddsByFiveWorkoutState extends State<OddsByFiveWorkout> {
-  final GlobalKey<MultiDigitInputState> _inputKey = GlobalKey<MultiDigitInputState>();
+  final GlobalKey<MultiDigitInputState> _inputKey =
+      GlobalKey<MultiDigitInputState>();
   int digit = 0;
   List<int> result = [];
   int userAnswer = 0;
@@ -52,7 +52,7 @@ class _OddsByFiveWorkoutState extends State<OddsByFiveWorkout> {
         centerTitle: true,
         leading: const BackWidget(page: KAppPages.oddsByFiveExplication),
       ),
-      floatingActionButton: const FabWidget(page: KAppPages.wantMore),
+      // floatingActionButton: const FabWidget(page: KAppPages.wantMore),
       body: Column(
         children: [
           const SizedBox(height: 10),
@@ -69,7 +69,10 @@ class _OddsByFiveWorkoutState extends State<OddsByFiveWorkout> {
             },
           ),
           const SizedBox(height: 15),
-          Text(l10n.yourAnswer(userAnswer.toString()), style: KTextStyle.body(context)),
+          Text(
+            l10n.yourAnswer(userAnswer.toString()),
+            style: KTextStyle.body(context),
+          ),
           const SizedBox(height: 10),
           Text(
             isCorrect ? l10n.correct : l10n.wrong,
@@ -90,7 +93,7 @@ class _OddsByFiveWorkoutState extends State<OddsByFiveWorkout> {
             },
             child: const Icon(Icons.refresh),
           ),
-          const SizedBox(height: 40.0)
+          const SizedBox(height: 40.0),
         ],
       ),
     );

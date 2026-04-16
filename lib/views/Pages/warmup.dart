@@ -10,7 +10,6 @@ import '../../constants/app_pages.dart';
 import '../../constants/operation.dart';
 import '../../constants/text_styles.dart';
 import '../../widgets/back_widget.dart';
-import '../../widgets/fab_widget.dart';
 
 class WarmUp extends StatefulWidget {
   const WarmUp({super.key});
@@ -54,9 +53,9 @@ class _WarmUpState extends State<WarmUp> {
         centerTitle: true,
         leading: const BackWidget(page: KAppPages.home),
       ),
-      floatingActionButton: const FabWidget(
-        page: KAppPages.oddsByFiveExplication,
-      ),
+      // floatingActionButton: const FabWidget(
+      //   page: KAppPages.oddsByFiveExplication,
+      // ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20.0),
         child: Column(

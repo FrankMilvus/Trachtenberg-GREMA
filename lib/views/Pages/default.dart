@@ -17,9 +17,9 @@ class HelloScreen extends StatelessWidget {
         centerTitle: true,
         leading: const BackWidget(page: KAppPages.home),
       ),
-      floatingActionButton: const FabWidget(
-        page: KAppPages.oddsByFiveExplication,
-      ),
+      // floatingActionButton: const FabWidget(
+      //   page: KAppPages.oddsByFiveExplication,
+      // ),
 
       body: Center(child: Text(l10n.hello)),
     );
