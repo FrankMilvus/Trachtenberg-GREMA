@@ -76,12 +76,14 @@ class WidgetTree extends StatelessWidget {
       ),
       bottomNavigationBar: Consumer<AppProvider>(
         builder: (context, appProvider, _) {
+          final currentPage = appProvider.selectedPage;
+          final lastPageIndex = pages.length - 1;
+
           return NavbarWidget(
             currentIndex: 0,
+            canGoBack: currentPage > 0,
+            canGoNext: currentPage < lastPageIndex,
             onTap: (index) {
-              final currentPage = appProvider.selectedPage;
-              final lastPageIndex = pages.length - 1;
-
               switch (index) {
                 case 0:
                   if (currentPage > 0) {

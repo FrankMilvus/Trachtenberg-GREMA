@@ -15,6 +15,7 @@ void main() async {
   await WakelockPlus.enable();
   final appProvider = AppProvider();
   await appProvider.loadThemePreference();
+  await appProvider.loadLocalePreference();
   runApp(
     ChangeNotifierProvider.value(value: appProvider, child: const MyApp()),
   );
