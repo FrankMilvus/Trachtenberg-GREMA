@@ -22,12 +22,33 @@ final List<Widget> pages = [
 class WidgetTree extends StatelessWidget {
   const WidgetTree({super.key});
 
+  String _getPageTitle(AppLocalizations l10n, int selectedPage) {
+    switch (selectedPage) {
+      case 0:
+        return l10n.whatIsThisApp;
+      case 1:
+        return l10n.warmUp;
+      case 2:
+        return l10n.oddsByFive;
+      case 3:
+        return l10n.workout;
+      case 4:
+        return l10n.wantMoreTitle;
+      default:
+        return l10n.appTitle;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
     return Scaffold(
       appBar: AppBar(
-        title: Text(l10n.appTitle),
+        title: Consumer<AppProvider>(
+          builder: (context, appProvider, _) {
+            return Text(_getPageTitle(l10n, appProvider.selectedPage));
+          },
+        ),
         centerTitle: true,
         actions: [
           Consumer<AppProvider>(
@@ -56,7 +77,7 @@ class WidgetTree extends StatelessWidget {
       bottomNavigationBar: Consumer<AppProvider>(
         builder: (context, appProvider, _) {
           return NavbarWidget(
-            currentIndex: 1,
+            currentIndex: 0,
             onTap: (index) {
               final currentPage = appProvider.selectedPage;
               final lastPageIndex = pages.length - 1;
@@ -68,9 +89,6 @@ class WidgetTree extends StatelessWidget {
                   }
                   break;
                 case 1:
-                  appProvider.setPage(1);
-                  break;
-                case 2:
                   if (currentPage < lastPageIndex) {
                     appProvider.setPage(currentPage + 1);
                   }

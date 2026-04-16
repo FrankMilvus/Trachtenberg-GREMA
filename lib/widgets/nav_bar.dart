@@ -22,10 +22,7 @@ class NavbarWidget extends StatelessWidget {
           icon: const Icon(Icons.arrow_back),
           label: l10n.back,
         ),
-        // BottomNavigationBarItem(
-        //   icon: const Icon(Icons.flash_on),
-        //   label: l10n.warmUp,
-        // ),
+
         BottomNavigationBarItem(
           icon: const Icon(Icons.navigate_next),
           label: l10n.next,
