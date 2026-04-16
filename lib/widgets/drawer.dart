@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:trachtenberg_grema/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
+import 'package:trachtenberg_grema/l10n/app_localizations.dart';
 import 'package:trachtenberg_grema/providers/app_provider.dart';
 
 import '/constants/app_pages.dart';
@@ -27,7 +27,11 @@ class DrawerWidget extends StatelessWidget {
                       onPressed: () {
                         appProvider.toggleTheme();
                       },
-                      icon: const Icon(Icons.dark_mode, color: Colors.white, size: 28),
+                      icon: const Icon(
+                        Icons.dark_mode,
+                        color: Colors.white,
+                        size: 28,
+                      ),
                     ),
                   ],
                 ),
@@ -73,33 +77,6 @@ class DrawerWidget extends StatelessWidget {
                   appProvider.setPage(KAppPages.wantMore);
                   Navigator.pop(context);
                 },
-              ),
-              const Divider(thickness: 1, height: 1),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-                child: Row(
-                  children: [
-                    const Icon(Icons.language, color: Colors.grey),
-                    const SizedBox(width: 32),
-                    Text(l10n.language, style: Theme.of(context).textTheme.titleMedium),
-                    const Spacer(),
-                    DropdownButton<Locale>(
-                      value: appProvider.locale ?? Localizations.localeOf(context),
-                      items: const [
-                        DropdownMenuItem(value: Locale('en'), child: Text('English')),
-                        DropdownMenuItem(value: Locale('es'), child: Text('Español')),
-                        DropdownMenuItem(value: Locale('de'), child: Text('Deutsch')),
-                        DropdownMenuItem(value: Locale('fr'), child: Text('Français')),
-                        DropdownMenuItem(value: Locale('ru'), child: Text('Русский')),
-                      ],
-                      onChanged: (Locale? newLocale) {
-                        if (newLocale != null) {
-                          appProvider.setLocale(newLocale);
-                        }
-                      },
-                    ),
-                  ],
-                ),
               ),
             ],
           );

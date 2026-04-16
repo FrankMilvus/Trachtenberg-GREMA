@@ -5,10 +5,12 @@ import 'package:provider/provider.dart';
 import 'package:trachtenberg_grema/providers/app_provider.dart';
 import 'package:trachtenberg_grema/views/widget_tree.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
-
-void main() {
+import 'package:wakelock_plus/wakelock_plus.dart';
+void main() async{
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+  WidgetsFlutterBinding.ensureInitialized();
+  await WakelockPlus.enable();
   runApp(
     ChangeNotifierProvider(
       create: (context) => AppProvider(),

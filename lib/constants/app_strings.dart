@@ -1,6 +1,6 @@
 class KAppStrings {
   static const hello =
-      'Hey guys! I am glad to see any of you here! This app is my pet project. And main'
+      'Hey guys!! I am glad to see any of you here! This app is my pet project!!. And main'
       ' target of this app create a sandbox to train fast mental counting skills';
   static const oddsByFiveMultiplicationExplanation =
       'Rule: To multiply a number by 5 using\n'

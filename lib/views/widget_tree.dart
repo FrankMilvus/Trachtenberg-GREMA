@@ -23,7 +23,27 @@ class WidgetTree extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("NeuroCalT"), centerTitle: true),
+      appBar: AppBar(
+        title: const Text("NeuroCalT+"),
+        centerTitle: true,
+        actions: [
+          Consumer<AppProvider>(
+            builder: (context, appProvider, _) {
+              return PopupMenuButton<Locale>(
+                icon: const Icon(Icons.language),
+                onSelected: appProvider.setLocale,
+                itemBuilder: (context) => const [
+                  PopupMenuItem(value: Locale('en'), child: Text('English')),
+                  PopupMenuItem(value: Locale('es'), child: Text('Español')),
+                  PopupMenuItem(value: Locale('de'), child: Text('Deutsch')),
+                  PopupMenuItem(value: Locale('fr'), child: Text('Français')),
+                  PopupMenuItem(value: Locale('ru'), child: Text('Русский')),
+                ],
+              );
+            },
+          ),
+        ],
+      ),
       drawer: const DrawerWidget(),
       body: Consumer<AppProvider>(
         builder: (context, appProvider, _) {
