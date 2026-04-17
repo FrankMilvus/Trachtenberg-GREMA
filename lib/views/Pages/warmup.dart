@@ -44,7 +44,7 @@ class _WarmUpState extends State<WarmUp> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20.0),
+      padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [

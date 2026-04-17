@@ -16,6 +16,7 @@ void main() async {
   final appProvider = AppProvider();
   await appProvider.loadThemePreference();
   await appProvider.loadLocalePreference();
+  await appProvider.loadSelectedPagePreference();
   runApp(
     ChangeNotifierProvider.value(value: appProvider, child: const MyApp()),
   );

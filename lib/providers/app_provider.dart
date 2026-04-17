@@ -4,6 +4,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 class AppProvider extends ChangeNotifier {
   static const String _themeKey = 'isDarkMode';
   static const String _localeKey = 'languageCode';
+  static const String _selectedPageKey = 'selectedPage';
 
   bool _isDarkMode = false;
   int _selectedPage = 0;
@@ -32,6 +33,12 @@ class AppProvider extends ChangeNotifier {
     notifyListeners();
   }
 
+  Future<void> loadSelectedPagePreference() async {
+    final prefs = await SharedPreferences.getInstance();
+    _selectedPage = prefs.getInt(_selectedPageKey) ?? 0;
+    notifyListeners();
+  }
+
   void toggleTheme() {
     _isDarkMode = !_isDarkMode;
     _saveThemePreference();
@@ -48,6 +55,11 @@ class AppProvider extends ChangeNotifier {
     await prefs.setString(_localeKey, _locale?.languageCode ?? 'en');
   }
 
+  Future<void> _saveSelectedPagePreference() async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setInt(_selectedPageKey, _selectedPage);
+  }
+
   void setLocale(Locale locale) {
     _locale = locale;
     _saveLocalePreference();
@@ -56,6 +68,7 @@ class AppProvider extends ChangeNotifier {
 
   void setPage(int index) {
     _selectedPage = index;
+    _saveSelectedPagePreference();
     notifyListeners();
   }
 
