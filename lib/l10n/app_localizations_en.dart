@@ -13,7 +13,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get hello =>
-      'Hey guys! I am glad to see any of you here! This app is my pet project. And main target of this app create a sandbox to train fast mental counting skills';
+      'Welcome to NeuroCalT+, your personal trainer for mastering numbers.\n\nOur app is built to sharpen your daily arithmetic skills while introducing you to the power of the Trachtenberg System. Whether you are looking to polish your basic math or tackle high-speed mental calculations, NeuroCalT+ provides the tools to transform how you process numbers.';
 
   @override
   String get whatIsThisApp => 'What is this app?';

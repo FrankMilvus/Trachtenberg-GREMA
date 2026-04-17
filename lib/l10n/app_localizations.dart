@@ -113,7 +113,7 @@ abstract class AppLocalizations {
   /// Intro text shown on the welcome page
   ///
   /// In en, this message translates to:
-  /// **'Hey guys! I am glad to see any of you here! This app is my pet project. And main target of this app create a sandbox to train fast mental counting skills'**
+  /// **'Welcome to NeuroCalT+, your personal trainer for mastering numbers.\n\nOur app is built to sharpen your daily arithmetic skills while introducing you to the power of the Trachtenberg System. Whether you are looking to polish your basic math or tackle high-speed mental calculations, NeuroCalT+ provides the tools to transform how you process numbers.'**
   String get hello;
 
   /// Title for the screen that explains the app
