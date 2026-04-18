@@ -205,6 +205,132 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Language'**
   String get language;
+
+  /// Short title for boosts mental speed
+  ///
+  /// In en, this message translates to:
+  /// **'⚡ Boosts mental speed and agility'**
+  String get plus_boosts_speed_title;
+
+  /// Longer description for boosts mental speed
+  ///
+  /// In en, this message translates to:
+  /// **'Quick arithmetic trains the brain to process information faster and respond more efficiently.'**
+  String get plus_boosts_speed_desc;
+
+  /// Short title for strengthens working memory
+  ///
+  /// In en, this message translates to:
+  /// **'🧩 Strengthens working memory'**
+  String get plus_strengthens_memory_title;
+
+  /// Longer description for strengthens working memory
+  ///
+  /// In en, this message translates to:
+  /// **'Mental calculations improve the ability to hold, manipulate, and recall information.'**
+  String get plus_strengthens_memory_desc;
+
+  /// Short title for improves focus
+  ///
+  /// In en, this message translates to:
+  /// **'🎯 Improves focus and concentration'**
+  String get plus_focus_title;
+
+  /// Longer description for improves focus
+  ///
+  /// In en, this message translates to:
+  /// **'Short arithmetic exercises train sustained attention and reduce mental distraction.'**
+  String get plus_focus_desc;
+
+  /// Short title for enhances logical thinking
+  ///
+  /// In en, this message translates to:
+  /// **'🔍 Enhances logical thinking'**
+  String get plus_logical_title;
+
+  /// Longer description for enhances logical thinking
+  ///
+  /// In en, this message translates to:
+  /// **'Regular practice develops reasoning skills that transfer to everyday problem-solving.'**
+  String get plus_logical_desc;
+
+  /// Short title for supports long-term brain health
+  ///
+  /// In en, this message translates to:
+  /// **'🛡️ Supports long-term brain health'**
+  String get plus_brain_health_title;
+
+  /// Longer description for supports long-term brain health
+  ///
+  /// In en, this message translates to:
+  /// **'Daily mental stimulation helps maintain cognitive sharpness and resilience over time.'**
+  String get plus_brain_health_desc;
+
+  /// Short title for builds confidence
+  ///
+  /// In en, this message translates to:
+  /// **'✅ Builds confidence'**
+  String get plus_confidence_title;
+
+  /// Longer description for builds confidence
+  ///
+  /// In en, this message translates to:
+  /// **'Successfully completing calculations increases confidence in your mental abilities.'**
+  String get plus_confidence_desc;
+
+  /// Short title for reduces mental noise
+  ///
+  /// In en, this message translates to:
+  /// **'🧘 Reduces mental noise'**
+  String get plus_reduces_noise_title;
+
+  /// Longer description for reduces mental noise
+  ///
+  /// In en, this message translates to:
+  /// **'Focusing on numbers helps quiet repetitive thoughts and lowers mild mental stress.'**
+  String get plus_reduces_noise_desc;
+
+  /// Section title for why it works
+  ///
+  /// In en, this message translates to:
+  /// **'🌟 Why it works'**
+  String get plus_why_title;
+
+  /// Bullet 1 for why it works
+  ///
+  /// In en, this message translates to:
+  /// **'✅ Only 5 minutes a day'**
+  String get plus_why_1;
+
+  /// Bullet 2 for why it works
+  ///
+  /// In en, this message translates to:
+  /// **'✅ Easy to maintain'**
+  String get plus_why_2;
+
+  /// Bullet 3 for why it works
+  ///
+  /// In en, this message translates to:
+  /// **'✅ No calculators'**
+  String get plus_why_3;
+
+  /// Bullet 4 for why it works
+  ///
+  /// In en, this message translates to:
+  /// **'✅ Big cognitive impact'**
+  String get plus_why_4;
+
+  /// Label for expanding text sections
+  ///
+  /// In en, this message translates to:
+  /// **'Read more'**
+  String get read_more;
+
+  /// Label for collapsing text sections
+  ///
+  /// In en, this message translates to:
+  /// **'Read less'**
+  String get read_less;
 }
 
 class _AppLocalizationsDelegate

@@ -63,4 +63,77 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get language => 'Langue';
+
+  @override
+  String get plus_boosts_speed_title =>
+      '⚡ Améliore la vitesse et l\'agilité mentales';
+
+  @override
+  String get plus_boosts_speed_desc =>
+      'Le calcul rapide entraîne le cerveau à traiter l\'information plus vite et à réagir plus efficacement.';
+
+  @override
+  String get plus_strengthens_memory_title =>
+      '🧩 Renforce la mémoire de travail';
+
+  @override
+  String get plus_strengthens_memory_desc =>
+      'Les calculs mentaux améliorent la capacité à retenir, manipuler et rappeler des informations.';
+
+  @override
+  String get plus_focus_title => '🎯 Améliore la concentration et l\'attention';
+
+  @override
+  String get plus_focus_desc =>
+      'De courts exercices d\'arithmétique entraînent l\'attention soutenue et réduisent les distractions mentales.';
+
+  @override
+  String get plus_logical_title => '🔍 Développe la pensée logique';
+
+  @override
+  String get plus_logical_desc =>
+      'Une pratique régulière développe des capacités de raisonnement utiles pour résoudre les problèmes du quotidien.';
+
+  @override
+  String get plus_brain_health_title =>
+      '🛡️ Favorise la santé cérébrale à long terme';
+
+  @override
+  String get plus_brain_health_desc =>
+      'La stimulation mentale quotidienne aide à maintenir la vivacité cognitive et la résilience dans le temps.';
+
+  @override
+  String get plus_confidence_title => '✅ Renforce la confiance en soi';
+
+  @override
+  String get plus_confidence_desc =>
+      'Réussir des calculs augmente la confiance dans ses capacités mentales.';
+
+  @override
+  String get plus_reduces_noise_title => '🧘 Réduit le bruit mental';
+
+  @override
+  String get plus_reduces_noise_desc =>
+      'Se concentrer sur les nombres aide à apaiser les pensées répétitives et à réduire un stress mental léger.';
+
+  @override
+  String get plus_why_title => '🌟 Pourquoi ça marche';
+
+  @override
+  String get plus_why_1 => '✅ Seulement 5 minutes par jour';
+
+  @override
+  String get plus_why_2 => '✅ Facile à maintenir';
+
+  @override
+  String get plus_why_3 => '✅ Sans calculatrice';
+
+  @override
+  String get plus_why_4 => '✅ Fort impact cognitif';
+
+  @override
+  String get read_more => 'Afficher plus';
+
+  @override
+  String get read_less => 'Afficher moins';
 }

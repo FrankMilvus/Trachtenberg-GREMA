@@ -1,6 +1,30 @@
 import 'package:flutter/material.dart';
 
 class KTextStyle {
+  static TextStyle title(BuildContext context) => TextStyle(
+    fontSize: 26,
+    fontWeight: FontWeight.bold,
+    color: Theme.of(context).colorScheme.primary,
+  );
+
+  static TextStyle attention(BuildContext context) => TextStyle(
+    fontSize: 20,
+    fontWeight: FontWeight.bold,
+    color: Theme.of(context).colorScheme.tertiary,
+  );
+
+  static TextStyle defaultText(BuildContext context) => TextStyle(
+    fontSize: 20,
+    fontWeight: FontWeight.w600,
+    color: Theme.of(context).colorScheme.onSurfaceVariant,
+  );
+
+  static TextStyle defaultTextSmall(BuildContext context) => TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.w600,
+    color: Theme.of(context).colorScheme.onSurfaceVariant,
+  );
+
   static TextStyle header(BuildContext context) => TextStyle(
     fontSize: 26,
     fontWeight: FontWeight.bold,

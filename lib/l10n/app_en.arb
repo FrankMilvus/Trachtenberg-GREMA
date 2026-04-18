@@ -72,5 +72,89 @@
   "language": "Language",
   "@language": {
     "description": "Label for language selector"
+  },
+  "plus_boosts_speed_title": "⚡ Boosts mental speed and agility",
+  "@plus_boosts_speed_title": {
+    "description": "Short title for boosts mental speed"
+  },
+  "plus_boosts_speed_desc": "Quick arithmetic trains the brain to process information faster and respond more efficiently.",
+  "@plus_boosts_speed_desc": {
+    "description": "Longer description for boosts mental speed"
+  },
+  "plus_strengthens_memory_title": "🧩 Strengthens working memory",
+  "@plus_strengthens_memory_title": {
+    "description": "Short title for strengthens working memory"
+  },
+  "plus_strengthens_memory_desc": "Mental calculations improve the ability to hold, manipulate, and recall information.",
+  "@plus_strengthens_memory_desc": {
+    "description": "Longer description for strengthens working memory"
+  },
+  "plus_focus_title": "🎯 Improves focus and concentration",
+  "@plus_focus_title": {
+    "description": "Short title for improves focus"
+  },
+  "plus_focus_desc": "Short arithmetic exercises train sustained attention and reduce mental distraction.",
+  "@plus_focus_desc": {
+    "description": "Longer description for improves focus"
+  },
+  "plus_logical_title": "🔍 Enhances logical thinking",
+  "@plus_logical_title": {
+    "description": "Short title for enhances logical thinking"
+  },
+  "plus_logical_desc": "Regular practice develops reasoning skills that transfer to everyday problem-solving.",
+  "@plus_logical_desc": {
+    "description": "Longer description for enhances logical thinking"
+  },
+  "plus_brain_health_title": "🛡️ Supports long-term brain health",
+  "@plus_brain_health_title": {
+    "description": "Short title for supports long-term brain health"
+  },
+  "plus_brain_health_desc": "Daily mental stimulation helps maintain cognitive sharpness and resilience over time.",
+  "@plus_brain_health_desc": {
+    "description": "Longer description for supports long-term brain health"
+  },
+  "plus_confidence_title": "✅ Builds confidence",
+  "@plus_confidence_title": {
+    "description": "Short title for builds confidence"
+  },
+  "plus_confidence_desc": "Successfully completing calculations increases confidence in your mental abilities.",
+  "@plus_confidence_desc": {
+    "description": "Longer description for builds confidence"
+  },
+  "plus_reduces_noise_title": "🧘 Reduces mental noise",
+  "@plus_reduces_noise_title": {
+    "description": "Short title for reduces mental noise"
+  },
+  "plus_reduces_noise_desc": "Focusing on numbers helps quiet repetitive thoughts and lowers mild mental stress.",
+  "@plus_reduces_noise_desc": {
+    "description": "Longer description for reduces mental noise"
+  },
+  "plus_why_title": "🌟 Why it works",
+  "@plus_why_title": {
+    "description": "Section title for why it works"
+  },
+  "plus_why_1": "✅ Only 5 minutes a day",
+  "@plus_why_1": {
+    "description": "Bullet 1 for why it works"
+  },
+  "plus_why_2": "✅ Easy to maintain",
+  "@plus_why_2": {
+    "description": "Bullet 2 for why it works"
+  },
+  "plus_why_3": "✅ No calculators",
+  "@plus_why_3": {
+    "description": "Bullet 3 for why it works"
+  },
+  "plus_why_4": "✅ Big cognitive impact",
+  "@plus_why_4": {
+    "description": "Bullet 4 for why it works"
+  },
+  "read_more": "Read more",
+  "@read_more": {
+    "description": "Label for expanding text sections"
+  },
+  "read_less": "Read less",
+  "@read_less": {
+    "description": "Label for collapsing text sections"
   }
 }

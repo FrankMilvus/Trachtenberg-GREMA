@@ -63,4 +63,76 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get language => 'Язык';
+
+  @override
+  String get plus_boosts_speed_title =>
+      '⚡ Повышает скорость и гибкость мышления';
+
+  @override
+  String get plus_boosts_speed_desc =>
+      'Быстрые арифметические упражнения тренируют мозг быстрее обрабатывать информацию и эффективнее реагировать.';
+
+  @override
+  String get plus_strengthens_memory_title => '🧩 Укрепляет рабочую память';
+
+  @override
+  String get plus_strengthens_memory_desc =>
+      'Устные вычисления улучшают способность удерживать, обрабатывать и воспроизводить информацию.';
+
+  @override
+  String get plus_focus_title => '🎯 Улучшает фокус и концентрацию';
+
+  @override
+  String get plus_focus_desc =>
+      'Короткие арифметические упражнения тренируют устойчивое внимание и снижают умственную отвлекаемость.';
+
+  @override
+  String get plus_logical_title => '🔍 Развивает логическое мышление';
+
+  @override
+  String get plus_logical_desc =>
+      'Регулярная практика развивает навыки рассуждения, которые помогают в решении повседневных задач.';
+
+  @override
+  String get plus_brain_health_title =>
+      '🛡️ Поддерживает здоровье мозга в долгосрочной перспективе';
+
+  @override
+  String get plus_brain_health_desc =>
+      'Ежедневная умственная нагрузка помогает сохранять когнитивную остроту и устойчивость со временем.';
+
+  @override
+  String get plus_confidence_title => '✅ Повышает уверенность в себе';
+
+  @override
+  String get plus_confidence_desc =>
+      'Успешное выполнение вычислений повышает уверенность в своих умственных способностях.';
+
+  @override
+  String get plus_reduces_noise_title => '🧘 Снижает ментальный шум';
+
+  @override
+  String get plus_reduces_noise_desc =>
+      'Концентрация на числах помогает успокоить повторяющиеся мысли и снизить легкий ментальный стресс.';
+
+  @override
+  String get plus_why_title => '🌟 Почему это работает';
+
+  @override
+  String get plus_why_1 => '✅ Всего 5 минут в день';
+
+  @override
+  String get plus_why_2 => '✅ Легко поддерживать';
+
+  @override
+  String get plus_why_3 => '✅ Без калькуляторов';
+
+  @override
+  String get plus_why_4 => '✅ Большой когнитивный эффект';
+
+  @override
+  String get read_more => 'Подробнее';
+
+  @override
+  String get read_less => 'Свернуть';
 }

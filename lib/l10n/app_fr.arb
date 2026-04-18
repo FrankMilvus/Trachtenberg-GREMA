@@ -16,5 +16,89 @@
   "back": "Retour",
   "home": "Accueil",
   "enterAnswer": "Entrez votre réponse ici",
-  "language": "Langue"
+  "language": "Langue",
+  "plus_boosts_speed_title": "⚡ Améliore la vitesse et l'agilité mentales",
+  "@plus_boosts_speed_title": {
+    "description": "Short title for boosts mental speed"
+  },
+  "plus_boosts_speed_desc": "Le calcul rapide entraîne le cerveau à traiter l'information plus vite et à réagir plus efficacement.",
+  "@plus_boosts_speed_desc": {
+    "description": "Longer description for boosts mental speed"
+  },
+  "plus_strengthens_memory_title": "🧩 Renforce la mémoire de travail",
+  "@plus_strengthens_memory_title": {
+    "description": "Short title for strengthens working memory"
+  },
+  "plus_strengthens_memory_desc": "Les calculs mentaux améliorent la capacité à retenir, manipuler et rappeler des informations.",
+  "@plus_strengthens_memory_desc": {
+    "description": "Longer description for strengthens working memory"
+  },
+  "plus_focus_title": "🎯 Améliore la concentration et l'attention",
+  "@plus_focus_title": {
+    "description": "Short title for improves focus"
+  },
+  "plus_focus_desc": "De courts exercices d'arithmétique entraînent l'attention soutenue et réduisent les distractions mentales.",
+  "@plus_focus_desc": {
+    "description": "Longer description for improves focus"
+  },
+  "plus_logical_title": "🔍 Développe la pensée logique",
+  "@plus_logical_title": {
+    "description": "Short title for enhances logical thinking"
+  },
+  "plus_logical_desc": "Une pratique régulière développe des capacités de raisonnement utiles pour résoudre les problèmes du quotidien.",
+  "@plus_logical_desc": {
+    "description": "Longer description for enhances logical thinking"
+  },
+  "plus_brain_health_title": "🛡️ Favorise la santé cérébrale à long terme",
+  "@plus_brain_health_title": {
+    "description": "Short title for supports long-term brain health"
+  },
+  "plus_brain_health_desc": "La stimulation mentale quotidienne aide à maintenir la vivacité cognitive et la résilience dans le temps.",
+  "@plus_brain_health_desc": {
+    "description": "Longer description for supports long-term brain health"
+  },
+  "plus_confidence_title": "✅ Renforce la confiance en soi",
+  "@plus_confidence_title": {
+    "description": "Short title for builds confidence"
+  },
+  "plus_confidence_desc": "Réussir des calculs augmente la confiance dans ses capacités mentales.",
+  "@plus_confidence_desc": {
+    "description": "Longer description for builds confidence"
+  },
+  "plus_reduces_noise_title": "🧘 Réduit le bruit mental",
+  "@plus_reduces_noise_title": {
+    "description": "Short title for reduces mental noise"
+  },
+  "plus_reduces_noise_desc": "Se concentrer sur les nombres aide à apaiser les pensées répétitives et à réduire un stress mental léger.",
+  "@plus_reduces_noise_desc": {
+    "description": "Longer description for reduces mental noise"
+  },
+  "plus_why_title": "🌟 Pourquoi ça marche",
+  "@plus_why_title": {
+    "description": "Section title for why it works"
+  },
+  "plus_why_1": "✅ Seulement 5 minutes par jour",
+  "@plus_why_1": {
+    "description": "Bullet 1 for why it works"
+  },
+  "plus_why_2": "✅ Facile à maintenir",
+  "@plus_why_2": {
+    "description": "Bullet 2 for why it works"
+  },
+  "plus_why_3": "✅ Sans calculatrice",
+  "@plus_why_3": {
+    "description": "Bullet 3 for why it works"
+  },
+  "plus_why_4": "✅ Fort impact cognitif",
+  "@plus_why_4": {
+    "description": "Bullet 4 for why it works"
+  },
+  "read_more": "Afficher plus",
+  "@read_more": {
+    "description": "Label for expanding text sections"
+  },
+  "read_less": "Afficher moins",
+  "@read_less": {
+    "description": "Label for collapsing text sections"
+  }
 }

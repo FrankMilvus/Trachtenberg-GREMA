@@ -16,5 +16,89 @@
   "back": "Zurück",
   "home": "Startseite",
   "enterAnswer": "Antwort hier eingeben",
-  "language": "Sprache"
+  "language": "Sprache",
+  "plus_boosts_speed_title": "⚡ Steigert mentale Geschwindigkeit und Beweglichkeit",
+  "@plus_boosts_speed_title": {
+    "description": "Short title for boosts mental speed"
+  },
+  "plus_boosts_speed_desc": "Schnelles Rechnen trainiert das Gehirn, Informationen schneller zu verarbeiten und effizienter zu reagieren.",
+  "@plus_boosts_speed_desc": {
+    "description": "Longer description for boosts mental speed"
+  },
+  "plus_strengthens_memory_title": "🧩 Stärkt das Arbeitsgedächtnis",
+  "@plus_strengthens_memory_title": {
+    "description": "Short title for strengthens working memory"
+  },
+  "plus_strengthens_memory_desc": "Kopfrechnen verbessert die Fähigkeit, Informationen zu behalten, zu verarbeiten und abzurufen.",
+  "@plus_strengthens_memory_desc": {
+    "description": "Longer description for strengthens working memory"
+  },
+  "plus_focus_title": "🎯 Verbessert Fokus und Konzentration",
+  "@plus_focus_title": {
+    "description": "Short title for improves focus"
+  },
+  "plus_focus_desc": "Kurze Rechenübungen trainieren anhaltende Aufmerksamkeit und verringern mentale Ablenkung.",
+  "@plus_focus_desc": {
+    "description": "Longer description for improves focus"
+  },
+  "plus_logical_title": "🔍 Fördert logisches Denken",
+  "@plus_logical_title": {
+    "description": "Short title for enhances logical thinking"
+  },
+  "plus_logical_desc": "Regelmäßiges Üben entwickelt Denkfähigkeiten, die sich auf alltägliches Problemlösen übertragen.",
+  "@plus_logical_desc": {
+    "description": "Longer description for enhances logical thinking"
+  },
+  "plus_brain_health_title": "🛡️ Unterstützt langfristige Gehirngesundheit",
+  "@plus_brain_health_title": {
+    "description": "Short title for supports long-term brain health"
+  },
+  "plus_brain_health_desc": "Tägliche mentale Stimulation hilft, kognitive Schärfe und Widerstandsfähigkeit langfristig zu erhalten.",
+  "@plus_brain_health_desc": {
+    "description": "Longer description for supports long-term brain health"
+  },
+  "plus_confidence_title": "✅ Stärkt das Selbstvertrauen",
+  "@plus_confidence_title": {
+    "description": "Short title for builds confidence"
+  },
+  "plus_confidence_desc": "Erfolgreich gelöste Rechenaufgaben stärken das Vertrauen in die eigenen mentalen Fähigkeiten.",
+  "@plus_confidence_desc": {
+    "description": "Longer description for builds confidence"
+  },
+  "plus_reduces_noise_title": "🧘 Reduziert mentale Unruhe",
+  "@plus_reduces_noise_title": {
+    "description": "Short title for reduces mental noise"
+  },
+  "plus_reduces_noise_desc": "Die Konzentration auf Zahlen hilft, wiederkehrende Gedanken zu beruhigen und leichten mentalen Stress zu senken.",
+  "@plus_reduces_noise_desc": {
+    "description": "Longer description for reduces mental noise"
+  },
+  "plus_why_title": "🌟 Warum es wirkt",
+  "@plus_why_title": {
+    "description": "Section title for why it works"
+  },
+  "plus_why_1": "✅ Nur 5 Minuten pro Tag",
+  "@plus_why_1": {
+    "description": "Bullet 1 for why it works"
+  },
+  "plus_why_2": "✅ Leicht durchzuhalten",
+  "@plus_why_2": {
+    "description": "Bullet 2 for why it works"
+  },
+  "plus_why_3": "✅ Keine Taschenrechner",
+  "@plus_why_3": {
+    "description": "Bullet 3 for why it works"
+  },
+  "plus_why_4": "✅ Große kognitive Wirkung",
+  "@plus_why_4": {
+    "description": "Bullet 4 for why it works"
+  },
+  "read_more": "Mehr anzeigen",
+  "@read_more": {
+    "description": "Label for expanding text sections"
+  },
+  "read_less": "Weniger anzeigen",
+  "@read_less": {
+    "description": "Label for collapsing text sections"
+  }
 }

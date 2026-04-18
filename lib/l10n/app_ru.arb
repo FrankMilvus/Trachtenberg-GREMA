@@ -16,5 +16,89 @@
   "back": "Назад",
   "home": "Главная",
   "enterAnswer": "Введите ответ здесь",
-  "language": "Язык"
+  "language": "Язык",
+  "plus_boosts_speed_title": "⚡ Повышает скорость и гибкость мышления",
+  "@plus_boosts_speed_title": {
+    "description": "Short title for boosts mental speed"
+  },
+  "plus_boosts_speed_desc": "Быстрые арифметические упражнения тренируют мозг быстрее обрабатывать информацию и эффективнее реагировать.",
+  "@plus_boosts_speed_desc": {
+    "description": "Longer description for boosts mental speed"
+  },
+  "plus_strengthens_memory_title": "🧩 Укрепляет рабочую память",
+  "@plus_strengthens_memory_title": {
+    "description": "Short title for strengthens working memory"
+  },
+  "plus_strengthens_memory_desc": "Устные вычисления улучшают способность удерживать, обрабатывать и воспроизводить информацию.",
+  "@plus_strengthens_memory_desc": {
+    "description": "Longer description for strengthens working memory"
+  },
+  "plus_focus_title": "🎯 Улучшает фокус и концентрацию",
+  "@plus_focus_title": {
+    "description": "Short title for improves focus"
+  },
+  "plus_focus_desc": "Короткие арифметические упражнения тренируют устойчивое внимание и снижают умственную отвлекаемость.",
+  "@plus_focus_desc": {
+    "description": "Longer description for improves focus"
+  },
+  "plus_logical_title": "🔍 Развивает логическое мышление",
+  "@plus_logical_title": {
+    "description": "Short title for enhances logical thinking"
+  },
+  "plus_logical_desc": "Регулярная практика развивает навыки рассуждения, которые помогают в решении повседневных задач.",
+  "@plus_logical_desc": {
+    "description": "Longer description for enhances logical thinking"
+  },
+  "plus_brain_health_title": "🛡️ Поддерживает здоровье мозга в долгосрочной перспективе",
+  "@plus_brain_health_title": {
+    "description": "Short title for supports long-term brain health"
+  },
+  "plus_brain_health_desc": "Ежедневная умственная нагрузка помогает сохранять когнитивную остроту и устойчивость со временем.",
+  "@plus_brain_health_desc": {
+    "description": "Longer description for supports long-term brain health"
+  },
+  "plus_confidence_title": "✅ Повышает уверенность в себе",
+  "@plus_confidence_title": {
+    "description": "Short title for builds confidence"
+  },
+  "plus_confidence_desc": "Успешное выполнение вычислений повышает уверенность в своих умственных способностях.",
+  "@plus_confidence_desc": {
+    "description": "Longer description for builds confidence"
+  },
+  "plus_reduces_noise_title": "🧘 Снижает ментальный шум",
+  "@plus_reduces_noise_title": {
+    "description": "Short title for reduces mental noise"
+  },
+  "plus_reduces_noise_desc": "Концентрация на числах помогает успокоить повторяющиеся мысли и снизить легкий ментальный стресс.",
+  "@plus_reduces_noise_desc": {
+    "description": "Longer description for reduces mental noise"
+  },
+  "plus_why_title": "🌟 Почему это работает",
+  "@plus_why_title": {
+    "description": "Section title for why it works"
+  },
+  "plus_why_1": "✅ Всего 5 минут в день",
+  "@plus_why_1": {
+    "description": "Bullet 1 for why it works"
+  },
+  "plus_why_2": "✅ Легко поддерживать",
+  "@plus_why_2": {
+    "description": "Bullet 2 for why it works"
+  },
+  "plus_why_3": "✅ Без калькуляторов",
+  "@plus_why_3": {
+    "description": "Bullet 3 for why it works"
+  },
+  "plus_why_4": "✅ Большой когнитивный эффект",
+  "@plus_why_4": {
+    "description": "Bullet 4 for why it works"
+  },
+  "read_more": "Подробнее",
+  "@read_more": {
+    "description": "Label for expanding text sections"
+  },
+  "read_less": "Свернуть",
+  "@read_less": {
+    "description": "Label for collapsing text sections"
+  }
 }

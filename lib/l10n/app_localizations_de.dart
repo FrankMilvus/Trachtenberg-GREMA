@@ -63,4 +63,76 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get language => 'Sprache';
+
+  @override
+  String get plus_boosts_speed_title =>
+      '⚡ Steigert mentale Geschwindigkeit und Beweglichkeit';
+
+  @override
+  String get plus_boosts_speed_desc =>
+      'Schnelles Rechnen trainiert das Gehirn, Informationen schneller zu verarbeiten und effizienter zu reagieren.';
+
+  @override
+  String get plus_strengthens_memory_title => '🧩 Stärkt das Arbeitsgedächtnis';
+
+  @override
+  String get plus_strengthens_memory_desc =>
+      'Kopfrechnen verbessert die Fähigkeit, Informationen zu behalten, zu verarbeiten und abzurufen.';
+
+  @override
+  String get plus_focus_title => '🎯 Verbessert Fokus und Konzentration';
+
+  @override
+  String get plus_focus_desc =>
+      'Kurze Rechenübungen trainieren anhaltende Aufmerksamkeit und verringern mentale Ablenkung.';
+
+  @override
+  String get plus_logical_title => '🔍 Fördert logisches Denken';
+
+  @override
+  String get plus_logical_desc =>
+      'Regelmäßiges Üben entwickelt Denkfähigkeiten, die sich auf alltägliches Problemlösen übertragen.';
+
+  @override
+  String get plus_brain_health_title =>
+      '🛡️ Unterstützt langfristige Gehirngesundheit';
+
+  @override
+  String get plus_brain_health_desc =>
+      'Tägliche mentale Stimulation hilft, kognitive Schärfe und Widerstandsfähigkeit langfristig zu erhalten.';
+
+  @override
+  String get plus_confidence_title => '✅ Stärkt das Selbstvertrauen';
+
+  @override
+  String get plus_confidence_desc =>
+      'Erfolgreich gelöste Rechenaufgaben stärken das Vertrauen in die eigenen mentalen Fähigkeiten.';
+
+  @override
+  String get plus_reduces_noise_title => '🧘 Reduziert mentale Unruhe';
+
+  @override
+  String get plus_reduces_noise_desc =>
+      'Die Konzentration auf Zahlen hilft, wiederkehrende Gedanken zu beruhigen und leichten mentalen Stress zu senken.';
+
+  @override
+  String get plus_why_title => '🌟 Warum es wirkt';
+
+  @override
+  String get plus_why_1 => '✅ Nur 5 Minuten pro Tag';
+
+  @override
+  String get plus_why_2 => '✅ Leicht durchzuhalten';
+
+  @override
+  String get plus_why_3 => '✅ Keine Taschenrechner';
+
+  @override
+  String get plus_why_4 => '✅ Große kognitive Wirkung';
+
+  @override
+  String get read_more => 'Mehr anzeigen';
+
+  @override
+  String get read_less => 'Weniger anzeigen';
 }

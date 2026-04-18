@@ -16,5 +16,89 @@
   "back": "Atrás",
   "home": "Inicio",
   "enterAnswer": "Ingrese su respuesta aquí",
-  "language": "Idioma"
+  "language": "Idioma",
+  "plus_boosts_speed_title": "⚡ Mejora la rapidez y agilidad mental",
+  "@plus_boosts_speed_title": {
+    "description": "Short title for boosts mental speed"
+  },
+  "plus_boosts_speed_desc": "La aritmética rápida entrena al cerebro para procesar información más rápido y responder con mayor eficiencia.",
+  "@plus_boosts_speed_desc": {
+    "description": "Longer description for boosts mental speed"
+  },
+  "plus_strengthens_memory_title": "🧩 Fortalece la memoria de trabajo",
+  "@plus_strengthens_memory_title": {
+    "description": "Short title for strengthens working memory"
+  },
+  "plus_strengthens_memory_desc": "Los cálculos mentales mejoran la capacidad de retener, manipular y recordar información.",
+  "@plus_strengthens_memory_desc": {
+    "description": "Longer description for strengthens working memory"
+  },
+  "plus_focus_title": "🎯 Mejora el enfoque y la concentración",
+  "@plus_focus_title": {
+    "description": "Short title for improves focus"
+  },
+  "plus_focus_desc": "Los ejercicios breves de aritmética entrenan la atención sostenida y reducen la distracción mental.",
+  "@plus_focus_desc": {
+    "description": "Longer description for improves focus"
+  },
+  "plus_logical_title": "🔍 Potencia el pensamiento lógico",
+  "@plus_logical_title": {
+    "description": "Short title for enhances logical thinking"
+  },
+  "plus_logical_desc": "La práctica regular desarrolla habilidades de razonamiento que se aplican a la resolución de problemas cotidianos.",
+  "@plus_logical_desc": {
+    "description": "Longer description for enhances logical thinking"
+  },
+  "plus_brain_health_title": "🛡️ Favorece la salud cerebral a largo plazo",
+  "@plus_brain_health_title": {
+    "description": "Short title for supports long-term brain health"
+  },
+  "plus_brain_health_desc": "La estimulación mental diaria ayuda a mantener la agudeza cognitiva y la resiliencia con el tiempo.",
+  "@plus_brain_health_desc": {
+    "description": "Longer description for supports long-term brain health"
+  },
+  "plus_confidence_title": "✅ Aumenta la confianza",
+  "@plus_confidence_title": {
+    "description": "Short title for builds confidence"
+  },
+  "plus_confidence_desc": "Completar cálculos con éxito aumenta la confianza en tus capacidades mentales.",
+  "@plus_confidence_desc": {
+    "description": "Longer description for builds confidence"
+  },
+  "plus_reduces_noise_title": "🧘 Reduce el ruido mental",
+  "@plus_reduces_noise_title": {
+    "description": "Short title for reduces mental noise"
+  },
+  "plus_reduces_noise_desc": "Centrarse en números ayuda a calmar pensamientos repetitivos y reduce el estrés mental leve.",
+  "@plus_reduces_noise_desc": {
+    "description": "Longer description for reduces mental noise"
+  },
+  "plus_why_title": "🌟 Por qué funciona",
+  "@plus_why_title": {
+    "description": "Section title for why it works"
+  },
+  "plus_why_1": "✅ Solo 5 minutos al día",
+  "@plus_why_1": {
+    "description": "Bullet 1 for why it works"
+  },
+  "plus_why_2": "✅ Fácil de mantener",
+  "@plus_why_2": {
+    "description": "Bullet 2 for why it works"
+  },
+  "plus_why_3": "✅ Sin calculadoras",
+  "@plus_why_3": {
+    "description": "Bullet 3 for why it works"
+  },
+  "plus_why_4": "✅ Gran impacto cognitivo",
+  "@plus_why_4": {
+    "description": "Bullet 4 for why it works"
+  },
+  "read_more": "Leer más",
+  "@read_more": {
+    "description": "Etiqueta para expandir secciones de texto"
+  },
+  "read_less": "Leer menos",
+  "@read_less": {
+    "description": "Etiqueta para colapsar secciones de texto"
+  }
 }

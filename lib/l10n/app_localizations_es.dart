@@ -63,4 +63,76 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get language => 'Idioma';
+
+  @override
+  String get plus_boosts_speed_title => '⚡ Mejora la rapidez y agilidad mental';
+
+  @override
+  String get plus_boosts_speed_desc =>
+      'La aritmética rápida entrena al cerebro para procesar información más rápido y responder con mayor eficiencia.';
+
+  @override
+  String get plus_strengthens_memory_title =>
+      '🧩 Fortalece la memoria de trabajo';
+
+  @override
+  String get plus_strengthens_memory_desc =>
+      'Los cálculos mentales mejoran la capacidad de retener, manipular y recordar información.';
+
+  @override
+  String get plus_focus_title => '🎯 Mejora el enfoque y la concentración';
+
+  @override
+  String get plus_focus_desc =>
+      'Los ejercicios breves de aritmética entrenan la atención sostenida y reducen la distracción mental.';
+
+  @override
+  String get plus_logical_title => '🔍 Potencia el pensamiento lógico';
+
+  @override
+  String get plus_logical_desc =>
+      'La práctica regular desarrolla habilidades de razonamiento que se aplican a la resolución de problemas cotidianos.';
+
+  @override
+  String get plus_brain_health_title =>
+      '🛡️ Favorece la salud cerebral a largo plazo';
+
+  @override
+  String get plus_brain_health_desc =>
+      'La estimulación mental diaria ayuda a mantener la agudeza cognitiva y la resiliencia con el tiempo.';
+
+  @override
+  String get plus_confidence_title => '✅ Aumenta la confianza';
+
+  @override
+  String get plus_confidence_desc =>
+      'Completar cálculos con éxito aumenta la confianza en tus capacidades mentales.';
+
+  @override
+  String get plus_reduces_noise_title => '🧘 Reduce el ruido mental';
+
+  @override
+  String get plus_reduces_noise_desc =>
+      'Centrarse en números ayuda a calmar pensamientos repetitivos y reduce el estrés mental leve.';
+
+  @override
+  String get plus_why_title => '🌟 Por qué funciona';
+
+  @override
+  String get plus_why_1 => '✅ Solo 5 minutos al día';
+
+  @override
+  String get plus_why_2 => '✅ Fácil de mantener';
+
+  @override
+  String get plus_why_3 => '✅ Sin calculadoras';
+
+  @override
+  String get plus_why_4 => '✅ Gran impacto cognitivo';
+
+  @override
+  String get read_more => 'Leer más';
+
+  @override
+  String get read_less => 'Leer menos';
 }
